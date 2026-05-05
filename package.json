@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start-admin": "node admin_server.js",
+    "sync": "node sync_to_db.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "multer": "^2.1.1",
+    "mysql2": "^3.22.2"
+  }
+}

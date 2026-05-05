@@ -1,0 +1,962 @@
+[
+  {
+    "company_name": "Max Fresh",
+    "category_id": 1
+  },
+  {
+    "company_name": "Garuda Overseas",
+    "category_id": 1
+  },
+  {
+    "company_name": "Bhalaria Metal Craft",
+    "category_id": 2
+  },
+  {
+    "company_name": "Shri and Sam",
+    "category_id": 2
+  },
+  {
+    "company_name": "Bhalaria Metal Craft",
+    "category_id": 1
+  },
+  {
+    "company_name": "Shri and Sam",
+    "category_id": 1
+  },
+  {
+    "company_name": "Classic Steels",
+    "category_id": 1
+  },
+  {
+    "company_name": "CBS Kitchenware",
+    "category_id": 1
+  },
+  {
+    "company_name": "Uninox Steel & Plast",
+    "category_id": 3
+  },
+  {
+    "company_name": "TAJ HOME CRAFT CO.",
+    "category_id": 3
+  },
+  {
+    "company_name": "Virtue Homeware",
+    "category_id": 1
+  },
+  {
+    "company_name": "JVL Classicware LLP",
+    "category_id": 1
+  },
+  {
+    "company_name": "Silver Glow",
+    "category_id": 1
+  },
+  {
+    "company_name": "Komal Steel India",
+    "category_id": 1
+  },
+  {
+    "company_name": "Garuda Overseas",
+    "category_id": 3
+  },
+  {
+    "company_name": "Uninox Steel & Plast",
+    "category_id": 1
+  },
+  {
+    "company_name": "TAJ HOME CRAFT CO.",
+    "category_id": 1
+  },
+  {
+    "company_name": "Kad Group",
+    "category_id": 5
+  },
+  {
+    "company_name": "Metallic Industries",
+    "category_id": 5
+  },
+  {
+    "company_name": "Metallic Industries",
+    "category_id": 4
+  },
+  {
+    "company_name": "WHITESTAR HOMEWARE",
+    "category_id": 5
+  },
+  {
+    "company_name": "Gupta Iron & Steel Co.",
+    "category_id": 4
+  },
+  {
+    "company_name": "Shri and Sam",
+    "category_id": 3
+  },
+  {
+    "company_name": "AASHI ENTERPRISES",
+    "category_id": 1
+  },
+  {
+    "company_name": "ZHONGSHAN JC POWER COMPANY",
+    "category_id": 1
+  },
+  {
+    "company_name": "Max Fresh",
+    "category_id": 3
+  },
+  {
+    "company_name": "ZHONGSHAN ZHONGHENG ELECTRONICS CO., LTD",
+    "category_id": 1
+  },
+  {
+    "company_name": "SHAOXING LIDA MOTOR CO.,LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "AARAV ENTERPRISES/ SAHIL ENTERPRISES",
+    "category_id": 1
+  },
+  {
+    "company_name": "AARAV ENTERPRISES/ SAHIL ENTERPRISES",
+    "category_id": 3
+  },
+  {
+    "company_name": "ARTEC UTENSILS PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "APEX HOMENEEDS PVT LTD",
+    "category_id": 1
+  },
+  {
+    "company_name": "YOGI PRODUCTS",
+    "category_id": 1
+  },
+  {
+    "company_name": "BALA KITCHEN APPLIANCES",
+    "category_id": 1
+  },
+  {
+    "company_name": "DEEP STEEL",
+    "category_id": 5
+  },
+  {
+    "company_name": "BHARAT ENTERPRISES",
+    "category_id": 5
+  },
+  {
+    "company_name": "SRI VANSHIKA STEEL/ R. K. RISE STEEL",
+    "category_id": 1
+  },
+  {
+    "company_name": "BHAGWATI STEEL TRADINGS",
+    "category_id": 1
+  },
+  {
+    "company_name": "D. S. METAL",
+    "category_id": 5
+  },
+  {
+    "company_name": "BINAYAK ALUMINIUM PVT. LTD.",
+    "category_id": 5
+  },
+  {
+    "company_name": "BHAGVAN SHRI STRIPS PVT LTD",
+    "category_id": 5
+  },
+  {
+    "company_name": "BREK ALUMINIUM INDUSTRIES /PUMPKIN COOKWARE",
+    "category_id": 1
+  },
+  {
+    "company_name": "AVON APPLIANCES PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "BHARAT INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "DHANLAXMI LASER TECHNOLOGY",
+    "category_id": 5
+  },
+  {
+    "company_name": "VIVEK ELECTROPLAST PVT LTD./ LESCO HOME APPLIANCES",
+    "category_id": 1
+  },
+  {
+    "company_name": "BHAWANI KITCHENWARE PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "DINETTE HOME PRODUCTS",
+    "category_id": 1
+  },
+  {
+    "company_name": "Gupta Iron & Steel Co.",
+    "category_id": 1
+  },
+  {
+    "company_name": "DHANLAXMI LASER TECHNOLOGY",
+    "category_id": 1
+  },
+  {
+    "company_name": "BHAWANI KITCHENWARE PVT. LTD.",
+    "category_id": 2
+  },
+  {
+    "company_name": "VIVEK ELECTROPLAST PVT LTD./ LESCO HOME APPLIANCES",
+    "category_id": 2
+  },
+  {
+    "company_name": "FNS INTERNATIONAL PVT LTD",
+    "category_id": 1
+  },
+  {
+    "company_name": "FNS INTERNATIONAL PVT LTD",
+    "category_id": 3
+  },
+  {
+    "company_name": "GAFFEL INDIA HOUSEWARE CO./ VISHAKHA OVERSEAS PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "GAFFEL INDIA HOUSEWARE CO./ VISHAKHA OVERSEAS PVT. LTD.",
+    "category_id": 2
+  },
+  {
+    "company_name": "GAGAN ENTERPRISES",
+    "category_id": 1
+  },
+  {
+    "company_name": "GAJANAND INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "UNICORN METAL INDUSTRIES     VALLABHDAS & SONS",
+    "category_id": 1
+  },
+  {
+    "company_name": "JAY KAY ENTERPRISES/ MAVEN STAINLESS",
+    "category_id": 5
+  },
+  {
+    "company_name": "GAURAV UDYOG/ HIM ENTERPRISES",
+    "category_id": 5
+  },
+  {
+    "company_name": "GAURAV UDYOG/ HIM ENTERPRISES",
+    "category_id": 1
+  },
+  {
+    "company_name": "GAURAV UDYOG/ HIM ENTERPRISES",
+    "category_id": 2
+  },
+  {
+    "company_name": "VIKASH METAL PRODUCTS",
+    "category_id": 1
+  },
+  {
+    "company_name": "GLARE HOME PRODUCTS PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "DINETTE HOME PRODUCTS",
+    "category_id": 2
+  },
+  {
+    "company_name": "VAYA LIFE PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "VARMORA PLASTECH PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "ARIHANT INDUSTRIES",
+    "category_id": 3
+  },
+  {
+    "company_name": "ARIHANT INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "H. K. HOME APPLIANCES",
+    "category_id": 1
+  },
+  {
+    "company_name": "HOT PLATE CENTER",
+    "category_id": 1
+  },
+  {
+    "company_name": "H. K. HOME APPLIANCES",
+    "category_id": 2
+  },
+  {
+    "company_name": "ASHVA TRADESOURCE",
+    "category_id": 5
+  },
+  {
+    "company_name": "HEENA APPLIANCES",
+    "category_id": 3
+  },
+  {
+    "company_name": "ATAL MAL HARCHAND MAL & SONS",
+    "category_id": 1
+  },
+  {
+    "company_name": "VARA BROTHERS",
+    "category_id": 1
+  },
+  {
+    "company_name": "AUTO CONTROLS",
+    "category_id": 5
+  },
+  {
+    "company_name": "GOYAL PRODUCT (INDIA)",
+    "category_id": 5
+  },
+  {
+    "company_name": "HOT PLATE CENTER",
+    "category_id": 5
+  },
+  {
+    "company_name": "MEHTA INDUSTRIAL CORPORATION",
+    "category_id": 5
+  },
+  {
+    "company_name": "AUTO CONTROLS",
+    "category_id": 2
+  },
+  {
+    "company_name": "MEHTA CAD CAM SYSTEMS PVT. LTD.",
+    "category_id": 2
+  },
+  {
+    "company_name": "VANDANA TRADELINKS PVT. LTD. / SKYLINE HOME APPLIANCES",
+    "category_id": 1
+  },
+  {
+    "company_name": "CHAUHAN ELECTRICAL WORKS",
+    "category_id": 1
+  },
+  {
+    "company_name": "BAADSHAH STAINLESS STEEL",
+    "category_id": 1
+  },
+  {
+    "company_name": "SAURABH STEELS (INDIA)",
+    "category_id": 1
+  },
+  {
+    "company_name": "SURYA PRABHA INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "UTTAM METALS",
+    "category_id": 1
+  },
+  {
+    "company_name": "UTTAM METALS",
+    "category_id": 5
+  },
+  {
+    "company_name": "BINAYAK ALUMINIUM PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "I TECH SOLUTION",
+    "category_id": 1
+  },
+  {
+    "company_name": "UNITED METALIK PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "INDO KITCHEN METAL INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "BLOSSOM KITCHENWARE PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "J. K. PRODUCTS",
+    "category_id": 1
+  },
+  {
+    "company_name": "J.N.K. METAL INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "JAGANNATH ALUMINIUM INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "JAGDAMBA CUTLERY PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "JAGRATAN FINVEST PVT LTD / ASP SEALING PRODUCTS LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "JAIPAN INDUSTRIES LTD",
+    "category_id": 1
+  },
+  {
+    "company_name": "JAY MAA KHODIYAR ENGINEERS",
+    "category_id": 1
+  },
+  {
+    "company_name": "JOGANI KITCHEN CRAFT",
+    "category_id": 1
+  },
+  {
+    "company_name": "UNICORP UTILITIES STRAINERS PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "BOSKINA INDUSTRIES/ IMPEX",
+    "category_id": 1
+  },
+  {
+    "company_name": "BRAVO HOMEWARES LLP",
+    "category_id": 1
+  },
+  {
+    "company_name": "TRICON INC. / SNP HOMEWARE",
+    "category_id": 2
+  },
+  {
+    "company_name": "TRICON INC. / SNP HOMEWARE",
+    "category_id": 1
+  },
+  {
+    "company_name": "BRD METALS",
+    "category_id": 3
+  },
+  {
+    "company_name": "BRD METALS",
+    "category_id": 1
+  },
+  {
+    "company_name": "BRILLIANT INTERNATIONAL LLP",
+    "category_id": 1
+  },
+  {
+    "company_name": "BREK ALUMINIUM INDUSTRIES /PUMPKIN COOKWARE",
+    "category_id": 2
+  },
+  {
+    "company_name": "BRILLIANT INTERNATIONAL LLP",
+    "category_id": 3
+  },
+  {
+    "company_name": "CAPITAL IMPEX PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "CITIZEN METAL INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "THERMO HOUSEWARE PVT LTD",
+    "category_id": 1
+  },
+  {
+    "company_name": "THE SHAHDARA ALUMINIUM FACTORY",
+    "category_id": 1
+  },
+  {
+    "company_name": "TEKSHIV SYSTEMS PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "SURYODAY INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "SWASTIK INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "K. C. PRODUCTS INDIA",
+    "category_id": 1
+  },
+  {
+    "company_name": "SURYA COOKWARE INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "K. HOME APPLIANCES / SHRI AADINATH ENTERPRISES",
+    "category_id": 1
+  },
+  {
+    "company_name": "GANESH METAL INDUSTRIES",
+    "category_id": 5
+  },
+  {
+    "company_name": "GOKUL INTERNATIONAL",
+    "category_id": 1
+  },
+  {
+    "company_name": "GLOBAL DESIGNER COLLECTION",
+    "category_id": 3
+  },
+  {
+    "company_name": "GMM COATINGS PVT. LTD./ GMM NONSTICK COATINGS PVT. LTD.",
+    "category_id": 3
+  },
+  {
+    "company_name": "GMM COATINGS PVT. LTD./ GMM NONSTICK COATINGS PVT. LTD.",
+    "category_id": 4
+  },
+  {
+    "company_name": "GOKUL INTERNATIONAL",
+    "category_id": 3
+  },
+  {
+    "company_name": "GOMTI SPORTS",
+    "category_id": 3
+  },
+  {
+    "company_name": "SUMIT UDYOG",
+    "category_id": 3
+  },
+  {
+    "company_name": "GULZAR MAL & SONS",
+    "category_id": 3
+  },
+  {
+    "company_name": "HOME SHINE (UNIQUE)",
+    "category_id": 3
+  },
+  {
+    "company_name": "K. V. TRADERS",
+    "category_id": 3
+  },
+  {
+    "company_name": "KANHA STEELS / GANESH TABLEWARE",
+    "category_id": 3
+  },
+  {
+    "company_name": "SUBHIKSH STEEL IMPEX PVT. LTD./ Luxmi Bartan Bhandar",
+    "category_id": 3
+  },
+  {
+    "company_name": "KARAN SALES PVT. LTD.",
+    "category_id": 3
+  },
+  {
+    "company_name": "KAVYA STEEL/ GANESH STEELS",
+    "category_id": 3
+  },
+  {
+    "company_name": "KRISHNA ALLOY STEELS",
+    "category_id": 3
+  },
+  {
+    "company_name": "KUMAR STEEL INC.",
+    "category_id": 3
+  },
+  {
+    "company_name": "STEELONE CORPORATION (INDIA)",
+    "category_id": 3
+  },
+  {
+    "company_name": "STAR METAWARE INDIA PVT. LTD. / STAR STEELS",
+    "category_id": 5
+  },
+  {
+    "company_name": "LALIT CASTING",
+    "category_id": 3
+  },
+  {
+    "company_name": "LAXMAN ENTERPRISES",
+    "category_id": 3
+  },
+  {
+    "company_name": "LIFELONG INTERNATIONAL/ ALLIANCE INTERNTIONAL",
+    "category_id": 3
+  },
+  {
+    "company_name": "SRI SAI PLAST",
+    "category_id": 1
+  },
+  {
+    "company_name": "OK INDUSTRIES",
+    "category_id": 3
+  },
+  {
+    "company_name": "OUTOKUMPU INDIA PVT. LTD.",
+    "category_id": 5
+  },
+  {
+    "company_name": "SNB ENTERPRISES PVT. LTD.",
+    "category_id": 5
+  },
+  {
+    "company_name": "CLASSIC ENTERPRISE CLASSIC INDUSTRIES,",
+    "category_id": 1
+  },
+  {
+    "company_name": "CLASSIC ENTERPRISE CLASSIC INDUSTRIES,",
+    "category_id": 3
+  },
+  {
+    "company_name": "CLASSYTOUCH INTERNATIONAL",
+    "category_id": 1
+  },
+  {
+    "company_name": "CLASSIC ENTERPRISE CLASSIC INDUSTRIES,",
+    "category_id": 2
+  },
+  {
+    "company_name": "COLORS HOME APPLIANCES PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "CROCKERY EMPORIUM (WonderChef)",
+    "category_id": 3
+  },
+  {
+    "company_name": "CROCKERY EMPORIUM (WonderChef)",
+    "category_id": 1
+  },
+  {
+    "company_name": "CONSOLIDATED MOPS/ CONSOLIDATED TEKNICS INDIA PVT.LTD.",
+    "category_id": 5
+  },
+  {
+    "company_name": "M. V. METALS/ MAXXEL INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "MAGICRAFT APPLIANCES",
+    "category_id": 1
+  },
+  {
+    "company_name": "SHUBH MURTI MAA BARTAN BHANDAR",
+    "category_id": 1
+  },
+  {
+    "company_name": "DARA INC.",
+    "category_id": 5
+  },
+  {
+    "company_name": "MAGNA BRANDS",
+    "category_id": 3
+  },
+  {
+    "company_name": "SHREYA MICROPLAST PVT.LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "MAGNA BRANDS",
+    "category_id": 1
+  },
+  {
+    "company_name": "MAGPPIE INTERNATIONAL LTD./ MAGPPIE RETAIL INDIA LTD.",
+    "category_id": 3
+  },
+  {
+    "company_name": "SHREYA HOME APPLIANCES/ SHREYA TELEMEDIA PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "MAHAA CAUVERY EXPORTS PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "MAGPPIE INTERNATIONAL LTD./ MAGPPIE RETAIL INDIA LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "SHREEPAL OVERSEAS",
+    "category_id": 1
+  },
+  {
+    "company_name": "SHREEJI ENTERPRISES",
+    "category_id": 1
+  },
+  {
+    "company_name": "MAHALAXMI AGENCIES / MACCLITE ENGINEERING AND ANODIZING",
+    "category_id": 1
+  },
+  {
+    "company_name": "DIVYANG METALS",
+    "category_id": 2
+  },
+  {
+    "company_name": "DIVYANG METALS",
+    "category_id": 3
+  },
+  {
+    "company_name": "SHREE VALLABH METALS",
+    "category_id": 1
+  },
+  {
+    "company_name": "MAHALAXMI UTENSIL PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "MAHALAXMI UTENSIL PVT. LTD.",
+    "category_id": 3
+  },
+  {
+    "company_name": "SHREE VAISHNO ABRASIVE PVT. LTD./ AVON ENTERPRISES",
+    "category_id": 1
+  },
+  {
+    "company_name": "HARSH ENTERPRISES/ HARSH ELECTRICALS",
+    "category_id": 1
+  },
+  {
+    "company_name": "SHREE SHAKTI ENTERPRISES PVT LTD",
+    "category_id": 1
+  },
+  {
+    "company_name": "MAHAVIR ENTERPRISES",
+    "category_id": 1
+  },
+  {
+    "company_name": "HARSH ENTERPRISES/ HARSH ELECTRICALS",
+    "category_id": 3
+  },
+  {
+    "company_name": "MAHAVIR ENTERPRISES",
+    "category_id": 3
+  },
+  {
+    "company_name": "SHREE PADMAVATI COOKWARE/ SHILPA STEEL INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "MAMTA STEELS",
+    "category_id": 5
+  },
+  {
+    "company_name": "SHREE MAHALAXMI TRADE INCORPORATION/  JIN AAGAM LIFESTYLE SOLUTIONS PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "MAMTA STEELS",
+    "category_id": 4
+  },
+  {
+    "company_name": "MANAK STEEL",
+    "category_id": 3
+  },
+  {
+    "company_name": "MANAK STEEL",
+    "category_id": 1
+  },
+  {
+    "company_name": "MASTER CHEF APPLIANCES",
+    "category_id": 1
+  },
+  {
+    "company_name": "MATRIX HOUSEWARES PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "MATRIX HOUSEWARES PVT. LTD.",
+    "category_id": 3
+  },
+  {
+    "company_name": "MEHTA INDUSTRIAL CORPORATION",
+    "category_id": 3
+  },
+  {
+    "company_name": "MEHTA INDUSTRIAL CORPORATION",
+    "category_id": 1
+  },
+  {
+    "company_name": "MELOMAX INDIA / PRESTIGE PLASTIC INDIA",
+    "category_id": 1
+  },
+  {
+    "company_name": "MINTAGE STEELS LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "MODERN HOME APPLIANCES",
+    "category_id": 1
+  },
+  {
+    "company_name": "MOHINI KITCHENWARE",
+    "category_id": 1
+  },
+  {
+    "company_name": "MOSAIC HOUSEWARE PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "MUKESH PLASTIC & ENGINEERING INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "MUSKAN ENTERPRISES",
+    "category_id": 3
+  },
+  {
+    "company_name": "PADIA EXPORTS PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "SHIVRUDRA INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "PARTAP METAL INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "NAKODA METALIKS",
+    "category_id": 1
+  },
+  {
+    "company_name": "PARUL HOME PRODUCTS",
+    "category_id": 1
+  },
+  {
+    "company_name": "PHILCO INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "SHASHWATAM INNOVATIONS INC.",
+    "category_id": 1
+  },
+  {
+    "company_name": "PRADEEP STAINLESS INDIA PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "PRITAM INTERNATIONAL",
+    "category_id": 1
+  },
+  {
+    "company_name": "R. K. METALWARE",
+    "category_id": 1
+  },
+  {
+    "company_name": "R. R. INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "R. R. INDUSTRIES / R. R. CULTERY PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "RAJA COMMERCIAL KITCHEN EQUIPMENT",
+    "category_id": 1
+  },
+  {
+    "company_name": "RAJKAMAL METAL INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "RAJLAKSHMI METAL INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "SHANTI PRASAD RAM CHANDRA",
+    "category_id": 1
+  },
+  {
+    "company_name": "RANAKPUR STEEL",
+    "category_id": 1
+  },
+  {
+    "company_name": "RANJAN STAINLESS",
+    "category_id": 1
+  },
+  {
+    "company_name": "RATHORE IMPEX / RATHORE INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "RATNA HOME PRODUCTS PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "REPUBLIC ENGINEERS",
+    "category_id": 1
+  },
+  {
+    "company_name": "SATYA DARSHAN UTILITIES PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "RIDDHI COOKWARE PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "ROOPS INDUSTRIES/ Rushabh Sales",
+    "category_id": 1
+  },
+  {
+    "company_name": "SATYA APPLIANCES PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "ROYAL ANTIQUE FURNITURE/                VISION SKY SHOP",
+    "category_id": 3
+  },
+  {
+    "company_name": "ROYAL INDUSTRIES/ JANTA BARTAN BHANDAR",
+    "category_id": 4
+  },
+  {
+    "company_name": "ROYAL INDUSTRIES/ JANTA BARTAN BHANDAR",
+    "category_id": 5
+  },
+  {
+    "company_name": "NATIONAL METALS/ NATIONAL INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "NATIONAL METALS/ NATIONAL INDUSTRIES",
+    "category_id": 3
+  },
+  {
+    "company_name": "SAPPHIRE INTERNATIONAL/                                   EVERSHINE METAL INDUSTRIES PVT. LTD.",
+    "category_id": 1
+  },
+  {
+    "company_name": "NESTWELL PRODUCTS",
+    "category_id": 1
+  },
+  {
+    "company_name": "NISHANT HOME APPLIANCES SARTAJ HOME APPLIANCES",
+    "category_id": 1
+  },
+  {
+    "company_name": "SAPNA INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "NAVBHARAT TUBES LTD.",
+    "category_id": 4
+  },
+  {
+    "company_name": "S. L. INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "SAGA STEELS",
+    "category_id": 1
+  },
+  {
+    "company_name": "SAGAR INTERNATIONAL/ SAGAR METAL INDUSTRIES",
+    "category_id": 1
+  },
+  {
+    "company_name": "Rajatb Kitchenware",
+    "category_id": 1
+  },
+  {
+    "company_name": "CROCKERY EMPORIUM (WonderChef)",
+    "category_id": 5
+  }
+]

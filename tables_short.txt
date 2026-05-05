@@ -1,0 +1,10 @@
+admin_access_tokens
+admin_resets
+admin_users
+app_blogs
+app_brands
+app_categories
+app_free_joiners
+app_products
+app_profiles
+app_users

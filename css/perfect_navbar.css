@@ -1,0 +1,213 @@
+/* Final Perfect Navbar Styles based on User Image */
+:root {
+  --nav-bg: #101e2c;
+  --nav-bg-alt: #162636;
+  --accent-orange: #f36b41;
+  --accent-pink: #ff4d6d;
+  --text-white: #ffffff;
+  --text-gray: #a0aec0;
+}
+
+body {
+  padding-top: 130px !important;
+}
+
+.extended-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  z-index: 1000;
+  background: var(--nav-bg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 0 !important;
+  border: none !important;
+  transform: none !important;
+  backdrop-filter: none !important;
+}
+
+.header-container {
+  max-width: 1400px !important;
+  width: 100% !important;
+  padding: 0 40px !important;
+}
+
+/* Top Row */
+.header-main-row {
+  padding: 15px 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.premium-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-icon-glass {
+  width: 48px !important;
+  height: 48px !important;
+  background: var(--accent-orange) !important;
+  border-radius: 50% !important;
+  /* Circle like in image */
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: white !important;
+  box-shadow: 0 4px 10px rgba(243, 107, 65, 0.3) !important;
+}
+
+.logo-text-gradient {
+  font-size: 1.8rem !important;
+  color: white !important;
+  font-weight: 800 !important;
+  letter-spacing: 1px !important;
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+/* Search Bubble - Rectangular & Dark like image */
+.search-bubble {
+  flex: 1;
+  max-width: 600px;
+  background: #1c2d3d !important;
+  border-radius: 6px !important;
+  /* Less rounded like image */
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 8px 15px !important;
+  margin: 0 40px !important;
+}
+
+.search-bubble input {
+  color: white !important;
+  font-size: 0.95rem !important;
+}
+
+.search-bubble input::placeholder {
+  color: #718096 !important;
+}
+
+.search-btn-icon {
+  background: transparent !important;
+  color: white !important;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Auth Actions */
+.top-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.login-link {
+  color: white !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+}
+
+.login-link i {
+  color: white !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+.action-btn.glow-btn {
+  background: var(--accent-orange) !important;
+  color: white !important;
+  padding: 10px 25px !important;
+  border-radius: 6px !important;
+  /* Rectangular-ish like image */
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  font-size: 0.9rem !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Bottom Row */
+.header-nav-row {
+  padding: 10px 0 15px 0 !important;
+  border: none !important;
+}
+
+.premium-nav-links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start !important;
+  gap: 25px !important;
+}
+
+.btn-categories {
+  background: transparent !important;
+  color: white !important;
+  border: none !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  padding: 0 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* DATA Button - The Pink One */
+.btn-data {
+  background: var(--accent-pink) !important;
+  color: white !important;
+  padding: 8px 20px !important;
+  border-radius: 10px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase;
+  display: flex !important;
+  align-items: center;
+  gap: 10px !important;
+  font-size: 1rem !important;
+  box-shadow: 0 5px 15px rgba(255, 77, 109, 0.3) !important;
+  margin-right: 15px;
+}
+
+.nav-item {
+  color: white !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.5px !important;
+  padding: 5px 0 !important;
+}
+
+.nav-item.active {
+  color: var(--accent-orange) !important;
+}
+
+.nav-item:hover {
+  color: var(--accent-orange) !important;
+}
+
+.nav-item::after,
+.nav-item::before {
+  display: none !important;
+}
+
+/* Dropdown styling to match */
+.dropdown-menu,
+.data-dropdown-menu {
+  background: #1c2d3d !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dropdown-menu a,
+.data-dropdown-menu a {
+  color: white !important;
+}
+
+.dropdown-menu a:hover,
+.data-dropdown-menu a:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: var(--accent-orange) !important;
+}

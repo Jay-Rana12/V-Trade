@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - GlobalTrade India</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=1777898037761">
+    <link rel="stylesheet" href="css/modal.css">
+    <!-- EmailJS SDK (Loaded in Head for priority) -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+        .page-header::before {
+            background: linear-gradient(135deg, rgba(10, 37, 64, 0.9) 0%, rgba(10, 37, 64, 0.7) 100%), url('images/imported-img-34.jpg') center/cover no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Premium Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo-img">
+                <img src="images/logo.png" alt="India Trade Logo">
+            </div>
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="loadingBar"></div>
+            </div>
+            <div class="loading-text">Forging Industrial Excellence...</div>
+        </div>
+    </div>
+
+    <!-- Three.js Background -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- Extended Header -->
+    <header class="extended-header">
+        <div class="container header-container">
+            <!-- Top Row: Logo, Search, Actions -->
+            
+            
+            
+            <div class="header-main-row">
+                <a href="index.html" class="premium-logo">
+                    <img src="images/logo.png" alt="India Trade Logo">
+                </a>
+
+                <div class="search-bubble top-search intel-search-container" style="position: relative;">
+                    <input type="text" id="header-search" class="intel-search" placeholder="Search globally..."
+                        autocomplete="off">
+                    <div class="location-indicator" id="header-location-badge"
+                        style="position: absolute; right: 85px; pointer-events: none; display: flex; align-items: center; gap: 5px; color: #f26b43; font-size: 0.75rem; font-weight: 700; white-space: nowrap;">
+                        <i class="fa-solid fa-location-crosshairs fa-spin"></i>
+                        <span class="user-city">Detecting...</span>
+                    </div>
+                    <button class="mic-btn-icon" title="Voice Search"><i class="fa-solid fa-microphone"></i></button><button class="search-btn-icon"><i class="fa-solid fa-search"></i></button>
+                    <div id="header-search-autocomplete" class="search-dropdown"
+                        style="top: 100%; left: 0; width: 100%;"></div>
+                </div>
+                <div class="top-nav-actions">
+                    <a href="login.html" class="login-link"><i class="fa-regular fa-user"></i> Sign In</a>
+                    <a href="join.html" class="action-btn glow-btn">Join Free</a>
+                </div>
+
+                <!-- Hamburger Menu Toggle (Visible on Mobile/Tablet) -->
+                <div class="mobile-toggle"><i class="fa-solid fa-bars-staggered"></i></div>
+            </div>
+
+            <!-- Bottom Row: Navigation links (Side drawer on mobile) -->
+            <nav class="header-nav-row">
+                <ul class="premium-nav-links">
+                    <li class="categories-dropdown">
+                        <button class="btn-categories"><i class="fa-solid fa-border-all"></i> ALL CATEGORIES <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu">
+                            <a href="kitchenware.html">KITCHENWARE</a>
+                            <a href="horeca.html">HORECA</a>
+                            <a href="houseware.html">HOUSEWARE</a>
+                            <a href="tubes-pipes.html">TUBES & PIPES</a>
+                            <a href="raw-materials.html">RAW MATERIALS</a>
+                        </div>
+                    </li>
+                    <li class="data-dropdown">
+                        <button class="btn-data">
+                            <i class="fa-solid fa-database"></i> Data
+                        </button>
+                        <div class="data-dropdown-menu">
+                            <a href="manufacturers.html" class="data-link manufacturers">
+                                <i class="fa-solid fa-industry"></i>
+                                <span class="link-title">Manufacturers</span>
+                            </a>
+                            <a href="dealers.html" class="data-link dealers">
+                                <i class="fa-solid fa-briefcase"></i>
+                                <span class="link-title">Dealers</span>
+                            </a>
+                            <a href="retailers.html" class="data-link retailers">
+                                <i class="fa-solid fa-store"></i>
+                                <span class="link-title">Retailers</span>
+                            </a>
+                            <a href="distributors.html" class="data-link distributors">
+                                <i class="fa-solid fa-dolly"></i>
+                                <span class="link-title">Distributors</span>
+                            </a>
+                            <a href="wholesalers.html" class="data-link wholesalers">
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                                <span class="link-title">Wholesalers</span>
+                            </a>
+                            <a href="traders.html" class="data-link traders">
+                                <i class="fa-solid fa-clipboard-list"></i>
+                                <span class="link-title">Traders</span>
+                            </a>
+                            <a href="importers.html" class="data-link importers">
+                                <i class="fa-solid fa-file-import"></i>
+                                <span class="link-title">Importers</span>
+                            </a>
+                            <a href="exporters.html" class="data-link exporters">
+                                <i class="fa-solid fa-file-export"></i>
+                                <span class="link-title">Exporters</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="index.html" class="nav-item">HOME</a></li>
+                    <li><a href="about.html" class="nav-item">ABOUT US</a></li>
+                    <li><a href="services.html" class="nav-item">TOP CATEGORY</a></li>
+                    <li><a href="products.html" class="nav-item">NEW ARRIVAL</a></li>
+                    <li><a href="gallery.html" class="nav-item">TRENDING PRODUCTS</a></li>
+                    <li><a href="blog.html" class="nav-item">BLOGS</a></li>
+                    <li><a href="contact.html" class="nav-item active">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="nav-overlay"></div>
+
+    
+
+    
+
+    
+
+    
+
+    <!-- Page Header -->
+    <header class="page-header contact-hero">
+        <div class="container hero-container">
+            <h1 class="split-text">Connect With <span class="text-gradient">IndiaTrade</span></h1>
+            <p>From manufacturing precision to global logistics – we are your trusted partner in premium kitchenware
+                exports.</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="section-padding contact-main-section">
+        <div class="container">
+            <div class="contact-wrapper">
+
+                <!-- Attraction Details (Contact Info) -->
+                <div class="contact-details-side">
+                    <div class="section-header" style="text-align: left; margin-bottom: 40px;">
+                        <span class="sub-title">Strategic Hub</span>
+                        <h2 class="section-title" style="font-size: 2.5rem;">Corporate <span
+                                class="text-gradient">Headquarters</span></h2>
+                        <p style="margin-top: 15px; color: #4b5563;">Visit our central administrative hub in Ahmedabad or reach out to our dedicated departments for trade inquiries and support.</p>
+                    </div>
+
+                    <div class="attraction-cards">
+                        <!-- Head Office -->
+                        <div class="attraction-card contact-info-card glass-card" data-category="hq">
+                            <div class="attraction-icon">
+                                <i class="fa-solid fa-building-user"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="tag" style="background:#eef2ff; color:#3730a3;">Corporate HQ</span>
+                                <h4 style="margin-bottom:5px;">Head Office</h4>
+                                <p style="font-size:0.9rem;">515, Fifth Floor, HillTown Impressa, Nikol,<br>Ahmedabad, Gujarat 380049</p>
+                                <a href="https://maps.google.com" target="_blank" class="map-link">View on Map <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Business Hours -->
+                        <div class="attraction-card contact-info-card glass-card" data-category="hours">
+                            <div class="attraction-icon">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="tag" style="background:#f0fdf4; color:#166534;">Operating Times</span>
+                                <h4 style="margin-bottom:5px;">Business Hours</h4>
+                                <div style="font-size: 0.9rem; color: #64748b; line-height: 1.6;">
+                                    <div><strong>Mon - Fri:</strong> 10:00 AM - 6:00 PM</div>
+                                    <div><strong>Saturday:</strong> 10:00 AM - 4:00 PM</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Details -->
+                        <div class="attraction-card contact-info-card glass-card" data-category="contact">
+                            <div class="attraction-icon">
+                                <i class="fa-solid fa-address-book"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="tag" style="background:#fff7ed; color:#c2410c;">Reach Us</span>
+                                <h4 style="margin-bottom:5px;">Contact Details</h4>
+                                <div style="font-size: 0.9rem; color: #64748b; line-height: 1.6;">
+                                    <div><i class="fa-solid fa-phone" style="width:18px; color:#F26B43;"></i> (+91) 99244 88938</div>
+                                    <div><i class="fa-solid fa-envelope" style="width:18px; color:#F26B43;"></i> info@vibrantindiafair.com</div>
+                                    <div><i class="fa-solid fa-globe" style="width:18px; color:#F26B43;"></i> www.vibrantindiafair.com</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Departments Strip -->
+                        <div class="quick-contact-strip glass-card" style="display:flex; flex-direction:column; gap:12px; padding:20px; align-items:flex-start; margin-top:10px;">
+                            <div style="font-weight: 800; color: #0A2540; font-size: 0.85rem; letter-spacing: 1.5px; border-bottom: 2px solid #F26B43; padding-bottom: 4px; margin-bottom: 8px;">DEPARTMENTS</div>
+                            <div class="quick-item" style="margin:0; padding:0;">
+                                <i class="fa-solid fa-headset" style="font-size:1.1rem;"></i>
+                                <div>
+                                    <span style="font-size:0.75rem;">Customer Support</span>
+                                    <p style="font-size:0.8rem; font-weight:600;">support@vibrantindia.co.in</p>
+                                </div>
+                            </div>
+                            <div class="quick-item" style="margin:0; padding:0;">
+                                <i class="fa-solid fa-handshake" style="font-size:1.1rem;"></i>
+                                <div>
+                                    <span style="font-size:0.75rem;">Partnerships</span>
+                                    <p style="font-size:0.8rem; font-weight:600;">partnership@vibrantindia.co.in</p>
+                                </div>
+                            </div>
+                            <div class="quick-item" style="margin:0; padding:0;">
+                                <i class="fa-solid fa-tag" style="font-size:1.1rem;"></i>
+                                <div>
+                                    <span style="font-size:0.75rem;">Sales Team</span>
+                                    <p style="font-size:0.8rem; font-weight:600;">sales@vibrantindia.co.in</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-side">
+                    <div class="form-container glass-card">
+                        <div class="form-header">
+                            <i class="fa-solid fa-paper-plane form-icon-float"
+                                style="font-size: 3rem; color: #F26B43; margin-bottom: 20px; display: block;"></i>
+                            <h3>Send Us a Message</h3>
+                            <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                        </div>
+                        <form action="#" method="POST" class="premium-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group floating-label">
+                                    <input type="text" id="firstName" name="firstName" class="form-control"
+                                        placeholder=" " required>
+                                    <label for="firstName">First Name</label>
+                                    <div class="input-focus-line"></div>
+                                </div>
+                                <div class="form-group floating-label">
+                                    <input type="text" id="lastName" name="lastName" class="form-control"
+                                        placeholder=" " required>
+                                    <label for="lastName">Last Name</label>
+                                    <div class="input-focus-line"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group floating-label">
+                                    <input type="email" id="email" name="email" class="form-control" placeholder=" "
+                                        required>
+                                    <label for="email">Email Address</label>
+                                    <div class="input-focus-line"></div>
+                                </div>
+                                <div class="form-group floating-label">
+                                    <input type="tel" id="phone" name="phone" class="form-control" placeholder=" "
+                                        required>
+                                    <label for="phone">Phone Number</label>
+                                    <div class="input-focus-line"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group floating-label">
+                                    <input type="text" id="company" name="company" class="form-control" placeholder=" "
+                                        required>
+                                    <label for="company">Company Name</label>
+                                    <div class="input-focus-line"></div>
+                                </div>
+                                <div class="form-group">
+                                    <select id="subject" name="subject" class="form-control select-control" required>
+                                        <option value="" disabled selected>Select a subject</option>
+                                        <option value="bulk">Bulk Export Inquiry</option>
+                                        <option value="custom">Custom Tooling/OEM</option>
+                                        <option value="logistics">Logistics Support</option>
+                                        <option value="distributor">Become a Distributor</option>
+                                        <option value="other">Other Inquiry</option>
+                                    </select>
+                                    <div class="input-focus-line"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-group floating-label">
+                                <textarea id="message" name="message" class="form-control" placeholder=" "
+                                    required></textarea>
+                                <label for="message">Tell us how we can help you...</label>
+                                <div class="input-focus-line"></div>
+                            </div>
+
+                            <div class="form-footer">
+                                <button type="submit" class="btn btn-primary submit-btn">
+                                    <span>Send Your Message</span>
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+                                <p class="form-note"><i class="fa-solid fa-shield-halved"></i> 100% Privacy Protected
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Map Section -->
+            <div class="map-section">
+                <div class="section-header" style="margin-bottom: 60px;">
+                    <span class="sub-title" style="text-align: center; margin: 0 auto 10px; display: table;">Corporate Hub</span>
+                    <h2 class="section-title">Strategic <span class="text-gradient">Corporate</span> Base</h2>
+                    <p style="max-width: 700px; margin: 15px auto 0;">Our administrative and design hub in Ahmedabad manages global trade relations and ensures seamless logistics for our international kitchenware exports.</p>
+                </div>
+
+                <div class="map-container-premium">
+                    <!-- Map Badge -->
+                    <div class="map-badge">
+                        <i class="fa-solid fa-certificate"></i>
+                        <div>
+                            <span
+                                style="display: block; font-size: 0.7rem; text-transform: uppercase; opacity: 0.7;">Quality
+                                Standard</span>
+                            <span style="font-weight: 700;">Global Export Grade</span>
+                        </div>
+                    </div>
+
+                    <!-- Map Overlay -->
+                    <div class="map-overlay-premium">
+                        <div class="map-info-premium">
+                            <div class="production-status">
+                                <span class="status-pulse"></span>
+                                OFFICE ACTIVE
+                            </div>
+                            <h4>Ahmedabad HQ - Corporate</h4>
+                            <div class="map-stat-flex">
+                                <div class="map-stat-item">
+                                    <i class="fa-solid fa-building-user"></i>
+                                    <span>Global Export Operations</span>
+                                </div>
+                                <div class="map-stat-item">
+                                    <i class="fa-solid fa-map-location-dot"></i>
+                                    <span>Nikol Business District Hub</span>
+                                </div>
+                                <div class="map-stat-item">
+                                    <i class="fa-solid fa-truck-fast"></i>
+                                    <span>Pan-India Logistics Control</span>
+                                </div>
+                            </div>
+                            <a href="https://maps.google.com" target="_blank" class="btn btn-primary"
+                                style="margin-top: 25px; width: 100%; height: 50px; font-size: 0.9rem;">
+                                Get Directions <i class="fa-solid fa-location-arrow" style="margin-left: 10px;"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14685.242784347781!2d72.673852!3d23.045437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e86fe913217d7%3A0xe54359fc40d398f6!2sHillTown%20Impressa!5e0!3m2!1sen!2sin!4v1713353500000!5m2!1sen!2sin"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo.png" alt="India Trade Logo" style="height: 50px;">
+                    </a>
+                    <p style="margin-bottom: 20px;">Connecting Indian businesses to the world through comprehensive
+                        export, import, and logistics services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="products.html">Our Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Export Consulting</a></li>
+                        <li><a href="services.html">Import Solutions</a></li>
+                        <li><a href="services.html">Supplier Sourcing</a></li>
+                        <li><a href="services.html">Logistics Management</a></li>
+                        <li><a href="services.html">Trade Documentation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Get In Touch</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                            <i class="fa-solid fa-location-dot" style="color: var(--accent); margin-top: 5px;"></i> 
+                            515, Fifth Floor, HillTown Impressa, Nikol, Ahmedabad, Gujarat 380049
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                            <i class="fa-solid fa-envelope" style="color: var(--accent); margin-top: 5px;"></i> 
+                            info@vibrantindiafair.com
+                        </li>
+                        <li style="display: flex; gap: 10px;">
+                            <i class="fa-solid fa-phone" style="color: var(--accent); margin-top: 5px;"></i> 
+                            +91 99244 88938
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 IndiaTrade. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script src="js/main.js?v=1777615201567"></script>
+    <script src="js/three-bg.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/modal_system.js"></script>
+    <script src="js/nav_animations.js"></script>
+
+    <!-- EmailJS Contact Form Connection -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contactForm");
+            if (form) {
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault();
+
+                    if (typeof emailjs === 'undefined') {
+                        console.error("EmailJS SDK not loaded!");
+                        alert("Contact service is temporarily unavailable. Please try again in a few seconds.");
+                        return;
+                    }
+
+                    // Explicitly initialize to ensure reliability
+                    emailjs.init({ publicKey: "yswvPmenzubJt3FSC" });
+
+                    const submitBtn = form.querySelector('.submit-btn');
+                    const originalBtnContent = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<span>Sending...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
+                    submitBtn.disabled = true;
+
+                    // Gather data from form
+                    const formData = new FormData(form);
+                    const firstName = formData.get("firstName") || "";
+                    const lastName = formData.get("lastName") || "";
+                    const company = formData.get("company") || "N/A";
+
+                    const name = firstName + " " + lastName;
+                    const message = formData.get("message") || "";
+                    const subjectRaw = formData.get("subject") || "Contact Inquiry";
+
+                    // Simple Mapping for subject text
+                    const subjectOptions = {
+                        "bulk": "Bulk Export Inquiry",
+                        "custom": "Custom Tooling/OEM",
+                        "logistics": "Logistics Support",
+                        "distributor": "Become a Distributor",
+                        "other": "Other Inquiry"
+                    };
+                    const subjectLine = subjectOptions[subjectRaw] || subjectRaw;
+
+                    const templateParams = {
+                        type_badge: "Customer Message",
+                        subject_title: "New Website Inquiry: " + subjectLine,
+                        main_description: "You have received a new message through the IndiaTrade contact form. Details are provided below.",
+                        
+                        user_name: name,
+                        user_email: formData.get("email"),
+                        user_phone: formData.get("phone"),
+                        user_company: company,
+                        user_subject: subjectLine,
+                        
+                        message_content: message,
+                        
+                        otp_display_style: "display:none;",
+                        product_display_style: "display:none;",
+                        message_display_style: "display:block;",
+                        
+                        action_url: window.location.origin + "/admin",
+                        action_text: "Go to Admin Panel",
+                        
+                        to_name: "IndiaTrade Admin",
+                        to_email: "vibrantindiatech515@gmail.com"
+                    };
+
+                    emailjs.send("service_qymzpli", "template_zh4lufc", templateParams, {
+                        publicKey: "yswvPmenzubJt3FSC",
+                    })
+                        .then(function (response) {
+                            console.log("SUCCESS!", response.status, response.text);
+                            if (typeof showSuccessPopup === 'function') {
+                                showSuccessPopup('Message Sent!', 'Your inquiry has been successfully sent. Our team will contact you shortly.');
+                            } else {
+                                submitBtn.innerHTML = '<span>Message Sent!</span> <i class="fa-solid fa-check"></i>';
+                                submitBtn.style.background = '#10b981';
+                            }
+                            form.reset();
+
+                            // Revert button after 3 seconds
+                            setTimeout(() => {
+                                submitBtn.innerHTML = originalBtnContent;
+                                submitBtn.disabled = false;
+                                submitBtn.style = '';
+                            }, 3000);
+                        }, function (error) {
+                            console.log("FAILED...", error);
+                            
+                            // Get actual error message
+                            const errorMsg = error.text || error.message || JSON.stringify(error) || "Unknown Error";
+                            alert("EmailJS Error: " + errorMsg + "\n\nPlease check your EmailJS Template ID, Service ID, or Domain restrictions.");
+                            
+                            submitBtn.innerHTML = originalBtnContent;
+                            submitBtn.disabled = false;
+                        });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
+

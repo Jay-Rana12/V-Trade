@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Houseware Essentials - IndiaTrade Global</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=1777615201582">
+    <link rel="stylesheet" href="css/category_standard.css?v=1777615201582">
+    <link rel="stylesheet" href="css/modal.css?v=2.5">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Force remove modal image shadow regardless of cache -->
+    <style>
+        .pd-img-container img {
+            filter: none !important;
+            box-shadow: none !important;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, rgba(10, 37, 64, 0.88) 0%, rgba(10, 37, 64, 0.65) 100%);
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/houseware_header_bg.png') center/cover no-repeat;
+            z-index: -2;
+        }
+
+        .page-header h1 {
+            font-size: 5rem;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: #ffffff;
+            letter-spacing: -3px;
+            line-height: 1;
+            text-transform: uppercase;
+            text-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .page-header h1 span {
+            background: linear-gradient(135deg, #FFD700 0%, #F59E0B 50%, #B45309 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .page-header p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 500;
+            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 12px 30px;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 3rem;
+                letter-spacing: -1px;
+            }
+
+            .page-header p {
+                font-size: 1.1rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo-img">
+                <img src="images/logo.png" alt="India Trade Logo">
+            </div>
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="loadingBar"></div>
+            </div>
+            <div class="loading-text">Forging Industrial Excellence...</div>
+        </div>
+    </div>
+
+    <canvas id="three-canvas"></canvas>
+
+    <header class="extended-header">
+        <div class="container header-container">
+            <div class="header-main-row">
+                <a href="index.html" class="premium-logo">
+                    <img src="images/logo.png" alt="India Trade Logo">
+                </a>
+                <div class="search-bubble top-search intel-search-container" style="position: relative;">
+                    <input type="text" id="header-search" class="intel-search" placeholder="Search globally..."
+                        autocomplete="off">
+                    <div class="location-indicator" id="header-location-badge"
+                        style="position: absolute; right: 85px; pointer-events: none; display: flex; align-items: center; gap: 5px; color: #f26b43; font-size: 0.75rem; font-weight: 700; white-space: nowrap;">
+                        <i class="fa-solid fa-location-crosshairs fa-spin"></i>
+                        <span class="user-city">Detecting...</span>
+                    </div>
+                    <button class="mic-btn-icon" title="Voice Search"><i class="fa-solid fa-microphone"></i></button><button class="search-btn-icon"><i class="fa-solid fa-search"></i></button>
+                    <div id="header-search-autocomplete" class="search-dropdown"
+                        style="top: 100%; left: 0; width: 100%;"></div>
+                </div>
+                <div class="top-nav-actions">
+                    <a href="login.html" class="login-link"><i class="fa-regular fa-user"></i> Sign In</a>
+                    <a href="join.html" class="action-btn glow-btn">Join Free</a>
+                </div>
+                <div class="mobile-toggle"><i class="fa-solid fa-bars-staggered"></i></div>
+            </div>
+            <nav class="header-nav-row">
+                <ul class="premium-nav-links">
+                    <li class="categories-dropdown">
+                        <button class="btn-categories"><i class="fa-solid fa-border-all"></i> ALL CATEGORIES <i
+                                class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu">
+                            <a href="kitchenware.html">KITCHENWARE</a>
+                            <a href="horeca.html">HORECA</a>
+                            <a href="houseware.html">HOUSEWARE</a>
+                            <a href="tubes-pipes.html">TUBES & PIPES</a>
+                            <a href="raw-materials.html">RAW MATERIALS</a>
+                        </div>
+                    </li>
+                    <li class="data-dropdown">
+                        <button class="btn-data"><i class="fa-solid fa-database"></i> Data</button>
+                        <div class="data-dropdown-menu">
+                            <a href="manufacturers.html" class="data-link manufacturers"><i
+                                    class="fa-solid fa-industry"></i><span class="link-title">Manufacturers</span></a>
+                            <a href="dealers.html" class="data-link dealers"><i class="fa-solid fa-briefcase"></i><span
+                                    class="link-title">Dealers</span></a>
+                            <a href="retailers.html" class="data-link retailers"><i class="fa-solid fa-store"></i><span
+                                    class="link-title">Retailers</span></a>
+                            <a href="distributors.html" class="data-link distributors"><i
+                                    class="fa-solid fa-dolly"></i><span class="link-title">Distributors</span></a>
+                            <a href="wholesalers.html" class="data-link wholesalers"><i
+                                    class="fa-solid fa-boxes-stacked"></i><span
+                                    class="link-title">Wholesalers</span></a>
+                            <a href="traders.html" class="data-link traders"><i
+                                    class="fa-solid fa-clipboard-list"></i><span class="link-title">Traders</span></a>
+                            <a href="importers.html" class="data-link importers"><i
+                                    class="fa-solid fa-file-import"></i><span class="link-title">Importers</span></a>
+                            <a href="exporters.html" class="data-link exporters"><i
+                                    class="fa-solid fa-file-export"></i><span class="link-title">Exporters</span></a>
+                        </div>
+                    </li>
+                    <li><a href="index.html" class="nav-item">HOME</a></li>
+                    <li><a href="about.html" class="nav-item">ABOUT US</a></li>
+                    <li><a href="services.html" class="nav-item">TOP CATEGORY</a></li>
+                    <li><a href="products.html" class="nav-item">NEW ARRIVAL</a></li>
+                    <li><a href="gallery.html" class="nav-item">TRENDING PRODUCTS</a></li>
+                    <li><a href="blog.html" class="nav-item">BLOGS</a></li>
+                    <li><a href="contact.html" class="nav-item">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="nav-overlay"></div>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container" style="position: relative; z-index: 10;">
+            <h1>Houseware <span>& Decor</span></h1>
+            <p>Premium stainless steel storage, lunch systems, and living essentials designed for modern global homes.
+            </p>
+        </div>
+    </header>
+
+    <!-- Product Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Houseware <span class="text-gradient">Premium</span> Line</h2>
+                <p>Superior durability and elegant design for refined living spaces.</p>
+            </div>
+
+            <!-- Modern Top Filter Bar -->
+            <div id="category-filter-bar-placeholder"></div>
+
+            <!-- Dynamic Product Grid -->
+            <div class="ts-grid" id="main-product-grid">
+                <div
+                    style="grid-column: 1 / -1; text-align: center; padding: 120px 20px; background: white; border-radius: 20px; border: 1px dashed #e2e8f0;">
+                    <i class="fa-solid fa-sync fa-spin"
+                        style="font-size: 3.5rem; color: #2563eb; margin-bottom: 25px;"></i>
+                    <h2 style="color: #0A2540; font-family: 'Poppins', sans-serif;">Synchronizing Global Database...
+                    </h2>
+                    <p style="color: #64748b; font-size: 1.1rem; max-width: 500px; margin: 10px auto;">Connecting to
+                        IndiaTrade server to fetch the latest Houseware products.</p>
+                </div>
+            </div>
+
+            <!-- Pagination Bar -->
+            <div id="product-pagination-bar" class="pagination-container"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo.png" alt="India Trade Logo" style="height: 50px;">
+                    </a>
+                    <p>Connecting Indian businesses to the world through comprehensive export, import, and logistics
+                        services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Trade Services</a></li>
+                        <li><a href="products.html">Our Products</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Get In Touch</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                            <i class="fa-solid fa-location-dot" style="color: var(--accent); margin-top: 5px;"></i>
+                            515, Fifth Floor, HillTown Impressa, Nikol, Ahmedabad, Gujarat 380049
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                            <i class="fa-solid fa-envelope" style="color: var(--accent); margin-top: 5px;"></i>
+                            info@vibrantindiafair.com
+                        </li>
+                        <li style="display: flex; gap: 10px;">
+                            <i class="fa-solid fa-phone" style="color: var(--accent); margin-top: 5px;"></i>
+                            +91 99244 88938
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GlobalTrade India. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Target -->
+    <div id="product-modal-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/products_data.js"></script>
+    <script src="js/main.js?v=4.9"></script>
+    <script src="js/three-bg.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/nav_animations.js"></script>
+    <!-- Logic handled by modal_system.js -->
+    <script src="js/modal_system.js?v=4.6"></script>
+    <script src="js/sidebar_filter.js?v=4.8"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Stylized V Icon -->
+  <path d="M100 80 L200 300 L300 80 L250 80 L200 200 L150 80 Z" fill="#1e1e1e"/>
+  <!-- Integrated Arrow -->
+  <path d="M210 180 L250 100 L290 180 L265 180 L265 240 L235 240 L235 180 Z" fill="#ffffff"/>
+  <!-- Text -->
+  <text x="200" y="360" font-family="'Inter', sans-serif" font-weight="900" font-size="42" text-anchor="middle" letter-spacing="2" fill="#1e1e1e">INDIA TRADE</text>
+</svg>

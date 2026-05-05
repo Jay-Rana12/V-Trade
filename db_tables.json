@@ -1,0 +1,32 @@
+[
+  {
+    "Tables_in_u728463759_vitrade": "admin_access_tokens"
+  },
+  {
+    "Tables_in_u728463759_vitrade": "admin_resets"
+  },
+  {
+    "Tables_in_u728463759_vitrade": "admin_users"
+  },
+  {
+    "Tables_in_u728463759_vitrade": "app_blogs"
+  },
+  {
+    "Tables_in_u728463759_vitrade": "app_brands"
+  },
+  {
+    "Tables_in_u728463759_vitrade": "app_categories"
+  },
+  {
+    "Tables_in_u728463759_vitrade": "app_free_joiners"
+  },
+  {
+    "Tables_in_u728463759_vitrade": "app_products"
+  },
+  {
+    "Tables_in_u728463759_vitrade": "app_profiles"
+  },
+  {
+    "Tables_in_u728463759_vitrade": "app_users"
+  }
+]

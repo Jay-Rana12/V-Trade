@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Insights & Blog - GlobalTrade India</title>
+    <meta name="description"
+        content="Stay updated with the latest trends in stainless steel manufacturing, global trade regulations, and kitchenware innovations.">
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=1777615201564">
+    <!-- EmailJS SDK (Loaded in Head for priority) -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <style>
+        header.page-header {
+            background: linear-gradient(135deg, rgba(10, 37, 64, 0.88) 0%, rgba(10, 37, 64, 0.65) 100%);
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/blog_banner.png') center/cover no-repeat;
+            z-index: -2;
+        }
+
+
+        /* Premium Blog Section Positioning */
+        .blog-section {
+            position: relative;
+            z-index: 1;
+            background: #f8fafc;
+            /* Solid light background to contrast with glass cards */
+            padding-bottom: 150px;
+        }
+
+        /* Featured Card - Solid & Premium */
+        .blog-featured-card {
+            border-radius: 20px;
+            overflow: hidden;
+            background: #ffffff;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 80px;
+            box-shadow: 0 25px 50px -12px rgba(10, 37, 64, 0.15);
+            border: 1px solid rgba(10, 37, 64, 0.05);
+        }
+
+        .blog-featured-img {
+            flex: 1.2;
+            min-width: 400px;
+            height: 480px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .blog-featured-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .blog-featured-card:hover .blog-featured-img img {
+            transform: scale(1.08);
+        }
+
+        .blog-featured-content {
+            flex: 1;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #ffffff;
+        }
+
+        .blog-category {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .blog-featured-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            line-height: 1.1;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+            color: #64748b;
+        }
+
+        .post-meta span i {
+            margin-right: 8px;
+            color: var(--accent);
+        }
+
+        .featured-excerpt {
+            font-size: 1.1rem;
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        /* Modern Grid Cards */
+        .blog-grid-modern {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 40px;
+        }
+
+        .modern-blog-card {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 30px rgba(10, 37, 64, 0.05);
+            border: 1px solid rgba(10, 37, 64, 0.05);
+        }
+
+        .modern-blog-card:hover {
+            transform: translateY(-20px);
+            box-shadow: 0 30px 60px rgba(10, 37, 64, 0.12);
+        }
+
+        .card-img-wrap {
+            height: 260px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .modern-blog-card:hover .card-img-wrap img {
+            transform: scale(1.15);
+        }
+
+        .card-category-pill {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(245, 158, 11, 0.2);
+            z-index: 2;
+        }
+
+        .card-content {
+            padding: 35px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+            line-height: 1.3;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .card-content p {
+            color: #64748b;
+            margin-bottom: 30px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .card-btn {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            transition: gap 0.3s ease;
+        }
+
+        .card-btn:hover {
+            gap: 18px;
+        }
+
+        /* Floating Animation Elements */
+        .decoration-shape {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        /* ===== TRENDING KITCHENWARE SECTION ===== */
+        .trending-kw-section {
+            margin: 90px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .trending-kw-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .trending-kw-header h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            position: relative;
+        }
+
+        .trending-kw-header h2 span {
+            color: var(--accent);
+        }
+
+        .trending-kw-header h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 70px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent), #f97316);
+            border-radius: 10px;
+        }
+
+        .trending-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #ff6b35, #f59e0b);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.35);
+            animation: pulse-badge 2s infinite;
+        }
+
+        @keyframes pulse-badge {
+
+            0%,
+            100% {
+                box-shadow: 0 8px 25px rgba(245, 158, 11, 0.35);
+            }
+
+            50% {
+                box-shadow: 0 8px 40px rgba(245, 158, 11, 0.65);
+            }
+        }
+
+        /* Track Wrapper — masks overflow */
+        .kw-track-wrapper {
+            overflow: hidden;
+            position: relative;
+            padding: 20px 0 30px;
+        }
+
+        /* Fade edges */
+        .kw-track-wrapper::before,
+        .kw-track-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 80px;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .kw-track-wrapper::before {
+            left: 0;
+            background: linear-gradient(to right, #f8fafc, transparent);
+        }
+
+        .kw-track-wrapper::after {
+            right: 0;
+            background: linear-gradient(to left, #f8fafc, transparent);
+        }
+
+        /* The scrolling track */
+        .kw-track {
+            display: flex;
+            gap: 28px;
+            width: max-content;
+            will-change: transform;
+        }
+
+        /* Individual Kitchenware Card */
+        .kw-card {
+            flex: 0 0 280px;
+            background: #ffffff;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(10, 37, 64, 0.08);
+            border: 1px solid rgba(10, 37, 64, 0.06);
+            transition: box-shadow 0.4s ease;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .kw-card:hover {
+            box-shadow: 0 25px 60px rgba(10, 37, 64, 0.18);
+        }
+
+        /* Shimmer overlay */
+        .kw-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg,
+                    transparent 25%,
+                    rgba(255, 255, 255, 0.4) 50%,
+                    transparent 75%);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        .kw-card:hover::before {
+            transform: translateX(100%);
+        }
+
+        .kw-card-img {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .kw-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .kw-card:hover .kw-card-img img {
+            transform: scale(1.12);
+        }
+
+        .kw-trend-tag {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: rgba(10, 37, 64, 0.85);
+            backdrop-filter: blur(8px);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 20px;
+            letter-spacing: 1px;
+            z-index: 4;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: gap 0.25s ease;
+        }
+
+        /* Infinite Scroll Animation */
+        @keyframes kwScrollInfinite {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .kw-track.auto-scroll-active {
+            animation: kwScrollInfinite 40s linear infinite;
+        }
+
+        .kw-track.auto-scroll-active:hover {
+            animation-play-state: paused;
+        }
+
+        .kw-card:hover .kw-view-btn {
+            gap: 10px;
+        }
+
+        /* Scroll control buttons */
+        .kw-controls {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .kw-ctrl-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid rgba(10, 37, 64, 0.15);
+            background: white;
+            color: var(--primary);
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(10, 37, 64, 0.08);
+        }
+
+        .kw-ctrl-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: scale(1.12);
+            box-shadow: 0 10px 30px rgba(10, 37, 64, 0.2);
+        }
+
+        /* Decorative orbs behind section */
+        .kw-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.18;
+            pointer-events: none;
+        }
+
+        /* Newsletter Area */
+        .newsletter-container {
+            margin-top: 120px;
+            position: relative;
+        }
+
+        .newsletter-box {
+            background: var(--primary);
+            padding: 80px 40px;
+            border-radius: 30px;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 40px 100px rgba(10, 37, 64, 0.4);
+        }
+
+        .newsletter-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(245, 158, 11, 0.1);
+            border-radius: 50%;
+            filter: blur(80px);
+        }
+
+        .newsletter-form {
+            max-width: 600px;
+            margin: 40px auto 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 18px 30px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            padding: 18px 45px;
+            border-radius: 40px;
+            border: none;
+            background: var(--accent);
+            color: var(--primary);
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(245, 158, 11, 0.4);
+        }
+
+        @media (max-width: 992px) {
+            .blog-featured-img {
+                min-width: 100%;
+                height: 350px;
+            }
+
+            .blog-featured-content {
+                padding: 40px;
+            }
+
+            .blog-featured-content h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-featured-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+
+        /* ===== PERFECT CARD STYLES (FINAL) ===== */
+        .kw-card {
+            flex: 0 0 280px;
+            background: #ffffff;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(10, 37, 64, 0.08);
+            border: 1px solid rgba(10, 37, 64, 0.06);
+            transition: box-shadow 0.4s ease;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .kw-card:hover {
+            box-shadow: 0 25px 60px rgba(10, 37, 64, 0.18);
+        }
+
+        .kw-card-img {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .kw-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .kw-card:hover .kw-card-img img {
+            transform: scale(1.1);
+        }
+
+        .kw-trend-tag {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 5px 13px;
+            border-radius: 20px;
+            letter-spacing: 0.8px;
+            z-index: 4;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .kw-trend-tag.hot {
+            background: linear-gradient(135deg, #ef4444, #f97316);
+        }
+
+        .kw-trend-tag.new {
+            background: linear-gradient(135deg, #059669, #10b981);
+        }
+
+        .kw-trend-tag.top {
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+        }
+
+        .kw-card-body {
+            padding: 20px 22px 22px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .kw-product-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0A2540;
+            margin: 0 0 8px 0;
+            line-height: 1.3;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .kw-product-sub {
+            font-size: 0.82rem;
+            color: #64748b;
+            line-height: 1.55;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin: 0 0 16px 0;
+            flex: 1;
+        }
+
+        .kw-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+            padding-top: 12px;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .kw-stars {
+            color: #f59e0b;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .kw-view-btn {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #F59E0B;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+            transition: gap 0.25s ease;
+        }
+
+        /* ===== BLOG TRACK SLIDER ===== */
+        .blog-track-section {
+            position: relative;
+            margin-bottom: 80px;
+            padding: 40px 0;
+            overflow: hidden;
+        }
+
+        .blog-track-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .blog-track-wrapper::before,
+        .blog-track-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 80px;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .blog-track-wrapper::before {
+            left: 0;
+            background: linear-gradient(to right, #ffffff, transparent);
+        }
+
+        .blog-track-wrapper::after {
+            right: 0;
+            background: linear-gradient(to left, #ffffff, transparent);
+        }
+
+        .blog-track {
+            display: flex;
+            gap: 28px;
+            width: max-content;
+            will-change: transform;
+        }
+
+        /* Modern Blog Slider Card */
+        .modern-blog-slider-card {
+            flex: 0 0 320px;
+            background: #ffffff;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(10, 37, 64, 0.08);
+            border: 1px solid rgba(10, 37, 64, 0.06);
+            transition: all 0.4s ease;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modern-blog-slider-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(10, 37, 64, 0.15);
+        }
+
+        .blog-slider-img {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .blog-slider-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .modern-blog-slider-card:hover .blog-slider-img img {
+            transform: scale(1.1);
+        }
+
+        .blog-slider-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-slider-category {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .blog-slider-content h3 {
+            font-size: 1.15rem;
+            line-height: 1.4;
+            margin-bottom: 12px;
+            font-weight: 700;
+            color: var(--primary);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            min-height: 3.2rem;
+        }
+
+        .blog-slider-meta {
+            font-size: 0.8rem;
+            color: #64748b;
+            display: flex;
+            gap: 15px;
+            margin-top: auto;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 15px;
+        }
+
+        .kw-card:hover .kw-view-btn {
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Premium Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo-img">
+                <img src="images/logo.png" alt="India Trade Logo">
+            </div>
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="loadingBar"></div>
+            </div>
+            <div class="loading-text">Forging Industrial Excellence...</div>
+        </div>
+    </div>
+
+    <!-- Three.js Background -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- Extended Header -->
+    <header class="extended-header">
+        <div class="container header-container">
+            <!-- Top Row: Logo, Search, Actions -->
+            <div class="header-main-row">
+                <a href="index.html" class="premium-logo">
+                    <img src="images/logo.png" alt="India Trade Logo">
+                </a>
+
+                <div class="search-bubble top-search intel-search-container" style="position: relative;">
+                    <input type="text" id="header-search" class="intel-search" placeholder="Search globally..."
+                        autocomplete="off">
+                    <div class="location-indicator" id="header-location-badge"
+                        style="position: absolute; right: 85px; pointer-events: none; display: flex; align-items: center; gap: 5px; color: #f26b43; font-size: 0.75rem; font-weight: 700; white-space: nowrap;">
+                        <i class="fa-solid fa-location-crosshairs fa-spin"></i>
+                        <span class="user-city">Detecting...</span>
+                    </div>
+                    <button class="mic-btn-icon" title="Voice Search"><i class="fa-solid fa-microphone"></i></button><button class="search-btn-icon"><i class="fa-solid fa-search"></i></button>
+                    <div id="header-search-autocomplete" class="search-dropdown"
+                        style="top: 100%; left: 0; width: 100%;"></div>
+                </div>
+
+                <div class="top-nav-actions">
+                    <a href="login.html" class="login-link"><i class="fa-regular fa-user"></i> Sign In</a>
+                    <a href="join.html" class="action-btn glow-btn">Join Free</a>
+                </div>
+
+                <!-- Hamburger Menu Toggle (Visible on Mobile/Tablet) -->
+                <div class="mobile-toggle"><i class="fa-solid fa-bars-staggered"></i></div>
+            </div>
+
+            <!-- Bottom Row: Navigation links (Side drawer on mobile) -->
+            <nav class="header-nav-row">
+                <ul class="premium-nav-links">
+                    <li class="categories-dropdown">
+                        <button class="btn-categories"><i class="fa-solid fa-border-all"></i> ALL CATEGORIES <i
+                                class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-menu">
+                            <a href="kitchenware.html">KITCHENWARE</a>
+                            <a href="horeca.html">HORECA</a>
+                            <a href="houseware.html">HOUSEWARE</a>
+                            <a href="tubes-pipes.html">TUBES & PIPES</a>
+                            <a href="raw-materials.html">RAW MATERIALS</a>
+                        </div>
+                    </li>
+                    <li class="data-dropdown">
+                        <button class="btn-data">
+                            <i class="fa-solid fa-database"></i> Data
+                        </button>
+                        <div class="data-dropdown-menu">
+                            <a href="manufacturers.html" class="data-link manufacturers">
+                                <i class="fa-solid fa-industry"></i>
+                                <span class="link-title">Manufacturers</span>
+                            </a>
+                            <a href="dealers.html" class="data-link dealers">
+                                <i class="fa-solid fa-briefcase"></i>
+                                <span class="link-title">Dealers</span>
+                            </a>
+                            <a href="retailers.html" class="data-link retailers">
+                                <i class="fa-solid fa-store"></i>
+                                <span class="link-title">Retailers</span>
+                            </a>
+                            <a href="distributors.html" class="data-link distributors">
+                                <i class="fa-solid fa-dolly"></i>
+                                <span class="link-title">Distributors</span>
+                            </a>
+                            <a href="wholesalers.html" class="data-link wholesalers">
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                                <span class="link-title">Wholesalers</span>
+                            </a>
+                            <a href="traders.html" class="data-link traders">
+                                <i class="fa-solid fa-clipboard-list"></i>
+                                <span class="link-title">Traders</span>
+                            </a>
+                            <a href="importers.html" class="data-link importers">
+                                <i class="fa-solid fa-file-import"></i>
+                                <span class="link-title">Importers</span>
+                            </a>
+                            <a href="exporters.html" class="data-link exporters">
+                                <i class="fa-solid fa-file-export"></i>
+                                <span class="link-title">Exporters</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="index.html" class="nav-item">HOME</a></li>
+                    <li><a href="about.html" class="nav-item">ABOUT US</a></li>
+                    <li><a href="services.html" class="nav-item">TOP CATEGORY</a></li>
+                    <li><a href="products.html" class="nav-item">NEW ARRIVAL</a></li>
+                    <li><a href="gallery.html" class="nav-item">TRENDING PRODUCTS</a></li>
+                    <li><a href="blog.html" class="nav-item active">BLOGS</a></li>
+                    <li><a href="contact.html" class="nav-item">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="nav-overlay"></div>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="gsap-header-title">Trade Insights</h1>
+            <p class="gsap-header-p">Deep dives into kitchenware, manufacturing, exports &amp; global commerce.</p>
+        </div>
+    </header>
+
+    <!-- Blog Section -->
+    <section class="blog-section section-padding">
+        <div class="container">
+
+            <!-- Latest Insights Slider — ALL blogs from DB -->
+            <div class="blog-track-section">
+                <div class="section-header" style="text-align:center; margin-bottom:50px;">
+                    <h2 class="section-title">Latest <span class="text-gradient">Trade</span> Insights</h2>
+                    <p style="color:#64748b; font-size:1.05rem;">Deep dives into kitchenware, manufacturing, exports &amp; global commerce.</p>
+                </div>
+
+                <div class="blog-track-wrapper" id="blog-track-wrapper">
+                    <div class="blog-track" id="blog-grid-dynamic">
+                        <!-- Skeleton while loading -->
+                        <div class="modern-blog-slider-card" style="pointer-events:none; opacity:0.4;">
+                            <div class="blog-slider-img" style="background:#f1f5f9;"></div>
+                            <div class="blog-slider-content"><div style="height:14px;background:#f1f5f9;border-radius:4px;margin-bottom:10px;"></div><div style="height:10px;background:#f1f5f9;border-radius:4px;width:70%;"></div></div>
+                        </div>
+                        <div class="modern-blog-slider-card" style="pointer-events:none; opacity:0.4;">
+                            <div class="blog-slider-img" style="background:#f1f5f9;"></div>
+                            <div class="blog-slider-content"><div style="height:14px;background:#f1f5f9;border-radius:4px;margin-bottom:10px;"></div><div style="height:10px;background:#f1f5f9;border-radius:4px;width:70%;"></div></div>
+                        </div>
+                        <div class="modern-blog-slider-card" style="pointer-events:none; opacity:0.4;">
+                            <div class="blog-slider-img" style="background:#f1f5f9;"></div>
+                            <div class="blog-slider-content"><div style="height:14px;background:#f1f5f9;border-radius:4px;margin-bottom:10px;"></div><div style="height:10px;background:#f1f5f9;border-radius:4px;width:70%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Controls -->
+                <div class="kw-controls">
+                    <button class="kw-ctrl-btn" id="blog-prev" title="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="kw-ctrl-btn" id="blog-pause" title="Pause"><i class="fa-solid fa-pause"></i></button>
+                    <button class="kw-ctrl-btn" id="blog-next" title="Next"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Newsletter Area -->
+            <div class="newsletter-container">
+                <div class="newsletter-box gsap-reveal-newsletter">
+                    <h2 style="font-size: 2.8rem; margin-bottom: 15px;">Stay Ahead in Global Trade</h2>
+                    <p style="opacity: 0.8; font-size: 1.1rem;">Subscribe to receive exclusive monthly reports on steel
+                        pricing, export trends, and trade policy updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your business email" required>
+                        <button type="submit">Join Trade Hub</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Blog Detail Modal -->
+    <div class="blog-modal-overlay" id="blog-modal-overlay">
+        <div class="blog-modal-container">
+            <button class="blog-modal-close" id="blog-modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="blog-modal-scroll">
+                <div class="blog-modal-header">
+                    <img id="modal-blog-img" src="" alt="">
+                    <div class="blog-modal-badge" id="modal-blog-category">Category</div>
+                </div>
+                <div class="blog-modal-body">
+                    <h1 id="modal-blog-title">Blog Title</h1>
+                    <div class="blog-modal-meta">
+                        <span><i class="fa-regular fa-calendar"></i> <span id="modal-blog-date">Date</span></span>
+                        <span><i class="fa-regular fa-user"></i> <span id="modal-blog-author">Admin</span></span>
+                    </div>
+                    <div class="blog-modal-content" id="modal-blog-content">
+                        <!-- Content goes here -->
+                    </div>
+                </div>
+                <div class="blog-modal-footer">
+                    <button class="btn btn-primary" onclick="closeBlogModal()"
+                        style="border-radius: 50px; padding: 12px 40px;">Finished Reading</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Outfit:wght@300;400;600;700;800&display=swap');
+
+        /* Blog Modal Styles */
+        .blog-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 37, 64, 0.9);
+            backdrop-filter: blur(12px);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .blog-modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .blog-modal-container {
+            background: white;
+            width: 100%;
+            max-width: 960px;
+            max-height: 100%;
+            border-radius: 32px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
+            transform: translateY(40px) scale(0.95);
+            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .blog-modal-overlay.active .blog-modal-container {
+            transform: translateY(0) scale(1);
+        }
+
+        .blog-modal-scroll {
+            max-height: 90vh;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #cbd5e1 transparent;
+        }
+
+        .blog-modal-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .blog-modal-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        .blog-modal-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .blog-modal-close:hover {
+            background: #f26b43;
+            color: white;
+            transform: rotate(90deg) scale(1.1);
+        }
+
+        .blog-modal-header {
+            width: 100%;
+            height: 480px;
+            position: relative;
+            background: #f1f5f9;
+        }
+
+        .blog-modal-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blog-modal-badge {
+            position: absolute;
+            bottom: 30px;
+            left: 50px;
+            background: #f26b43;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 20px rgba(242, 107, 67, 0.4);
+        }
+
+        .blog-modal-body {
+            padding: 60px 80px;
+            background: white;
+        }
+
+        .blog-modal-body h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: #0a2540;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
+        }
+
+        .blog-modal-meta {
+            display: flex;
+            gap: 30px;
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 45px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 1.05rem;
+        }
+
+        .blog-modal-meta i {
+            margin-right: 10px;
+            color: #f26b43;
+        }
+
+        .blog-modal-content {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.45rem;
+            line-height: 1.7;
+            color: #1e293b;
+        }
+
+        .blog-modal-content p {
+            margin-bottom: 28px;
+        }
+
+        .blog-modal-content h2,
+        .blog-modal-content h3 {
+            font-family: 'Outfit', sans-serif;
+            color: #0a2540;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        .blog-modal-footer {
+            padding: 40px 80px;
+            background: #f8fafc;
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        @media (max-width: 992px) {
+            .blog-modal-body {
+                padding: 40px 50px;
+            }
+
+            .blog-modal-body h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-modal-header {
+                height: 280px;
+            }
+
+            .blog-modal-badge {
+                left: 30px;
+                bottom: 20px;
+            }
+
+            .blog-modal-body {
+                padding: 30px 25px;
+            }
+
+            .blog-modal-body h1 {
+                font-size: 2rem;
+            }
+
+            .blog-modal-footer {
+                padding: 30px 25px;
+            }
+
+            .blog-modal-content {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo.png" alt="India Trade Logo" style="height: 50px;">
+                    </a>
+                    <p style="margin-bottom: 30px; opacity: 0.8;">Empowering Indian manufacturers with global reach and
+                        supply chain excellence since 1998.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="services.html">Trade Solutions</a></li>
+                        <li><a href="products.html">Catalog</a></li>
+                        <li><a href="gallery.html">Showcase</a></li>
+                        <li><a href="blog.html">Insights</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Specialties</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Kitchenware Export</a></li>
+                        <li><a href="#">Horeca Solutions</a></li>
+                        <li><a href="#">Custom Manufacturing</a></li>
+                        <li><a href="#">Supply Chain Audit</a></li>
+                        <li><a href="#">Trade Finance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Get In Touch</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                            <i class="fa-solid fa-location-dot" style="color: var(--accent); margin-top: 5px;"></i>
+                            515, Fifth Floor, HillTown Impressa, Nikol, Ahmedabad, Gujarat 380049
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px;">
+                            <i class="fa-solid fa-envelope" style="color: var(--accent); margin-top: 5px;"></i>
+                            info@vibrantindiafair.com
+                        </li>
+                        <li style="display: flex; gap: 10px;">
+                            <i class="fa-solid fa-phone" style="color: var(--accent); margin-top: 5px;"></i>
+                            +91 99244 88938
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GlobalTrade India. Crafted for Global Excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="js/products_data.js"></script>
+    <script src="js/modal_system.js"></script>
+    <script src="js/main.js?v=ULTRA_FORCE_REFRESH_101"></script>
+    <script src="js/three-bg.js"></script>
+    <script src="js/nav_animations.js"></script>
+
+    <!-- Advanced GSAP Script for Blog -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // 1. Page Header Reveal (standard page-header)
+            gsap.from(".gsap-header-title", {
+                y: 60,
+                opacity: 0,
+                duration: 1.1,
+                ease: "power4.out"
+            });
+            gsap.from(".gsap-header-p", {
+                y: 30,
+                opacity: 0,
+                duration: 0.9,
+                delay: 0.35,
+                ease: "power3.out"
+            });
+
+
+            // 2. Featured Post - Reveal Mask Effect
+            gsap.from(".blog-featured-img", {
+                scrollTrigger: {
+                    trigger: ".blog-featured-card",
+                    start: "top 80%"
+                },
+                clipPath: "inset(0 100% 0 0)",
+                duration: 1.5,
+                ease: "power4.inOut"
+            });
+
+            gsap.from(".blog-featured-content > *", {
+                scrollTrigger: {
+                    trigger: ".blog-featured-card",
+                    start: "top 70%"
+                },
+                y: 40,
+                opacity: 0,
+                duration: 0.8,
+                stagger: 0.15,
+                ease: "power2.out"
+            });
+
+            // 3. Blog Track Entrance
+            gsap.from(".modern-blog-slider-card", {
+                scrollTrigger: {
+                    trigger: ".blog-track-section",
+                    start: "top 80%"
+                },
+                y: 60,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.15,
+                ease: "power3.out"
+            });
+
+            // 4. Newsletter Magnetic Entrance
+            gsap.from(".gsap-reveal-newsletter", {
+                scrollTrigger: {
+                    trigger: ".newsletter-container",
+                    start: "top 85%"
+                },
+                scale: 0.9,
+                opacity: 0,
+                duration: 1.5,
+                ease: "expo.out"
+            });
+
+            // 5. Blog Card Hover Tilt Effect
+            const blogCards = document.querySelectorAll('.modern-blog-slider-card');
+            blogCards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const rotateX = (y - rect.height / 2) / 25;
+                    const rotateY = (rect.width / 2 - x) / 25;
+                    gsap.to(card, { rotateX, rotateY, transformPerspective: 1000, duration: 0.4, ease: "power2.out", overwrite: true });
+                });
+                card.addEventListener('mouseleave', () => {
+                    gsap.to(card, { rotateX: 0, rotateY: 0, duration: 1, ease: "elastic.out(1, 0.3)", overwrite: true });
+                });
+            });
+
+            // 6. Featured card parallax
+            gsap.to(".blog-featured-img img", {
+                scrollTrigger: { trigger: ".blog-featured-card", start: "top bottom", end: "bottom top", scrub: 1 },
+                y: 30, scale: 1.1, ease: "none"
+            });
+
+            // ==========================================
+            // TRENDING KITCHENWARE — RIGHT-TO-LEFT GSAP
+            // ==========================================
+
+            const kwSection = document.getElementById('trending-kitchenware');
+            const kwTrack = document.getElementById('kw-track');
+            const kwHeader = document.getElementById('kw-header');
+
+            if (kwSection && kwTrack) {
+
+                /* 
+                gsap.from(kwSection, {
+                    scrollTrigger: {
+                        trigger: kwSection,
+                        start: "top 85%"
+                    },
+                    x: 120,
+                    opacity: 0,
+                    duration: 1.2
+                });
+                */
+
+                let mainTween;
+                let loopWidth = 0;
+
+                const startScrolling = () => {
+                    const origCards = [...kwTrack.querySelectorAll('.kw-card')];
+                    if (origCards.length === 0) return;
+
+                    // Clear existing clones
+                    const existingClones = kwTrack.querySelectorAll('[aria-hidden="true"]');
+                    existingClones.forEach(c => c.remove());
+
+                    let w = 0;
+                    origCards.forEach(c => { w += c.offsetWidth + 28; });
+                    if (w <= 100) {
+                        setTimeout(startScrolling, 500);
+                        return;
+                    }
+                    loopWidth = w;
+
+                    // Clone
+                    origCards.forEach(card => {
+                        const clone = card.cloneNode(true);
+                        clone.setAttribute('aria-hidden', 'true');
+                        kwTrack.appendChild(clone);
+                    });
+
+                    // GSAP Loop
+                    if (mainTween) mainTween.kill();
+                    mainTween = gsap.to(kwTrack, {
+                        x: -loopWidth,
+                        duration: loopWidth / 35,
+                        ease: "none",
+                        repeat: -1,
+                        overwrite: true
+                    });
+                };
+
+                window.addEventListener('load', startScrolling);
+                window.addEventListener('kw-data-loaded', startScrolling);
+                setTimeout(startScrolling, 1200);
+
+                // Controls
+                document.getElementById('kw-prev').addEventListener('click', () => { gsap.to(kwTrack, { x: "+=320", duration: 0.5 }); });
+                document.getElementById('kw-next').addEventListener('click', () => { gsap.to(kwTrack, { x: "-=320", duration: 0.5 }); });
+
+                const pauseBtn = document.getElementById('kw-pause');
+                let isPaused = false;
+                pauseBtn.addEventListener('click', () => {
+                    isPaused = !isPaused;
+                    if (isPaused) { mainTween.pause(); pauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>'; }
+                    else { mainTween.play(); pauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>'; }
+                });
+
+                // Hover
+                kwTrack.addEventListener('mouseenter', () => { if (mainTween) mainTween.pause(); });
+                kwTrack.addEventListener('mouseleave', () => { if (mainTween && !isPaused) mainTween.play(); });
+
+                kwTrack.addEventListener('mousemove', (e) => {
+                    const card = e.target.closest('.kw-card');
+                    if (!card) return;
+                    const rect = card.getBoundingClientRect();
+                    const dx = e.clientX - rect.left - rect.width / 2;
+                    const dy = e.clientY - rect.top - rect.height / 2;
+                    gsap.to(card, { rotateX: -dy / 15, rotateY: dx / 15, scale: 1.05, duration: 0.3, overwrite: true });
+                });
+                kwTrack.addEventListener('mouseout', (e) => {
+                    const card = e.target.closest('.kw-card');
+                    if (card) gsap.to(card, { rotateX: 0, rotateY: 0, scale: 1, duration: 0.6, overwrite: true });
+                });
+
+                // ---- Glowing orb parallax ----
+                const orbs = kwSection.querySelectorAll('.kw-orb');
+                gsap.to(orbs[0], {
+                    scrollTrigger: { trigger: kwSection, start: "top bottom", end: "bottom top", scrub: 2 },
+                    x: -80, y: 60, ease: "none"
+                });
+                if (orbs[1]) {
+                    gsap.to(orbs[1], {
+                        scrollTrigger: { trigger: kwSection, start: "top bottom", end: "bottom top", scrub: 2 },
+                        x: 60, y: -40, ease: "none"
+                    });
+                }
+
+            } // end if kwSection
+
+        }); // end DOMContentLoaded
+    </script>
+</body>
+
+</html>
+

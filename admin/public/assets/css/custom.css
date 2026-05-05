@@ -1,0 +1,355 @@
+/* =========================================
+   Vibrant Admin - custom.css
+   Complete stylesheet: layout, navbar, sidebar,
+   main content, product cards, modals, forms, responsive
+   ========================================= */
+
+/* ------------------ FILE: assets/css/custom.css ------------------ */
+
+/* ------------------ VARIABLES / GLOBAL ------------------ */
+:root{
+  --primary: #0057ff;
+  --primary-dark: #0041c7;
+  --bg-light: #f4f6f8;
+  --text-dark: #1d1d1f;
+  --muted: #6c757d;
+  --card-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  --radius: 12px;
+  --glass: rgba(255,255,255,0.9);
+  --success: #28a745;
+  --danger: #dc3545;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body {
+  font-family: "Inter", system-ui, Arial, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  margin:0;
+  padding:0;
+}
+
+/* ------------------ NAVBAR ------------------ */
+.navbar {
+  backdrop-filter: blur(6px);
+  background: #ffffffd8 !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  padding: .45rem 1rem;
+}
+.navbar .navbar-brand { display:flex; align-items:center; gap:10px; }
+.navbar-brand span { font-weight:700; letter-spacing:.5px; font-size:1.1rem; color:var(--text-dark); }
+.navbar .nav-link { color: rgba(0,0,0,0.7); padding:.5rem .75rem; border-radius:8px; }
+.navbar .nav-link.active, .navbar .nav-link:hover { background: var(--primary); color: #fff; transform: translateY(-1px); }
+
+/* Hamburger for small screens */
+.navbar .hamburger { display:none; }
+@media (max-width: 991.98px) {
+  .navbar .hamburger { display:inline-flex; }
+}
+
+/* ------------------ SIDEBAR ------------------ */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #fff;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: var(--card-shadow);
+  z-index: 1100;
+}
+.sidebar .brand { padding: 0 20px; margin-bottom: 18px; display:flex; align-items:center; gap:10px; }
+.sidebar a {
+  display:block;
+  padding: 12px 25px;
+  font-size:15px;
+  color:#444;
+  margin-bottom:6px;
+  border-radius:8px;
+  transition: .22s ease;
+  text-decoration:none;
+}
+.sidebar a:hover, .sidebar a.active { background: var(--primary); color:#fff; transform: translateX(4px); }
+
+/* sidebar collapse on mobile */
+@media (max-width: 991.98px) {
+  .sidebar { left: -320px; transition:left .28s ease; box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
+  .sidebar.open { left: 0; }
+  .sidebar-backdrop { display:none; position:fixed; inset:0; background: rgba(0,0,0,0.36); z-index:1098; }
+  .sidebar-backdrop.show { display:block; }
+}
+
+/* ------------------ MAIN CONTENT ------------------ */
+.main-content {
+  margin-left: 260px;
+  padding: 30px;
+  min-height: 100vh;
+  transition: margin .22s ease, padding .22s ease;
+}
+@media (min-width:1400px){ .sidebar{width:260px} .main-content{margin-left:280px;padding:36px} }
+@media (min-width:992px) and (max-width:1399px){ .sidebar{width:240px} .main-content{margin-left:260px;padding:30px} }
+@media (max-width:991.98px){ .main-content{margin-left:0;padding:20px} }
+
+/* page title */
+.page-title { margin-bottom:18px; font-size:1.15rem; font-weight:600; }
+
+/* ------------------ CARDS ------------------ */
+.card { border-radius: var(--radius); box-shadow: var(--card-shadow); border: none; background: #fff; }
+.card .card-header { background: transparent; border-bottom: none; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.card .card-body { padding: 16px; }
+
+/* ------------------ PRODUCT CARDS (enhanced) ------------------ */
+.product-card {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform .25s ease, box-shadow .25s ease;
+    border: none;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100%;
+}
+.product-card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(0,0,0,0.10); }
+
+/* image area: crisp rendering fixes */
+.product-card .card-img-top {
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    display:block;
+    transition: transform .28s ease;
+    will-change: transform;
+    filter: none !important;
+    -webkit-filter: none !important;
+    backdrop-filter: none !important;
+
+    /* Rendering improvements to avoid blur on some GPUs/DPRs */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    image-rendering: auto;
+    -webkit-image-rendering: auto;
+}
+.product-card:hover .card-img-top { transform: scale(1.035); }
+
+/* Drag and Drop styles */
+.product-card.drag-over {
+    border: 2px dashed var(--primary) !important;
+    background: rgba(0, 87, 255, 0.05);
+}
+
+.product-card .drop-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 87, 255, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    border-radius: var(--radius);
+}
+
+.product-card.drag-over .drop-overlay {
+    opacity: 1;
+}
+
+.product-card .drop-overlay i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.product-card .drop-overlay span {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.product-card .uploading-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 101;
+    display: none;
+}
+
+.product-card.is-uploading .uploading-overlay {
+    display: flex;
+}
+
+/* card body layout */
+.product-card .card-body {
+    min-height:130px;
+    padding:14px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+/* text */
+.product-title { font-weight:600; font-size:16px; margin-bottom:6px; color:var(--text-dark); }
+.product-company, .company-small { font-size:13px; color:var(--muted); margin-top:4px; }
+
+/* logo badge overlay (company logo) */
+.product-card .logo-badge {
+    position:absolute;
+    right:10px;
+    top:10px;
+    width:56px;
+    height:56px;
+    border-radius:10px;
+    background: rgba(255,255,255,0.96);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    overflow:hidden;
+    z-index:5;
+    border:1px solid rgba(0,0,0,0.04);
+}
+.product-card .logo-badge img { width:100%; height:100%; object-fit:contain; display:block; }
+
+/* clickable pointer and keyboard focus */
+.product-clickable { cursor:pointer; }
+.product-clickable:focus { outline: 3px solid rgba(0,87,255,0.12); outline-offset:2px; }
+
+/* actions */
+.product-card .card-actions { display:flex; justify-content:space-between; gap:8px; margin-top:8px; }
+
+/* no products state */
+.products-grid .no-products {
+  grid-column: 1 / -1;
+  padding: 18px;
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+  color: #666;
+}
+
+/* ------------------ GRID FOR PRODUCTS ------------------ */
+.products-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
+}
+@media (max-width:1199.98px) { .products-grid{ grid-template-columns: repeat(3,1fr); } }
+@media (max-width:991.98px)  { .products-grid{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width:575.98px)  { .products-grid{ grid-template-columns: 1fr; } }
+
+/* ------------------ BUTTONS ------------------ */
+.btn-primary {
+  background: var(--primary);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: 500;
+}
+.btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,87,255,0.08); }
+.btn { min-height: 40px; padding: 8px 14px; }
+
+/* small button styles */
+.btn-outline-danger { border-radius:8px; }
+
+/* ------------------ TABLES ------------------ */
+.table { background:#fff; border-radius:var(--radius); box-shadow:var(--card-shadow); }
+.table thead { background:var(--primary); color:#fff; font-weight:600; }
+.table tbody td { vertical-align: middle; }
+
+/* responsive table wrapper */
+.table-responsive-custom { width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; background:transparent; border-radius:12px; padding:8px; }
+.table-responsive-custom .table { min-width:740px; margin-bottom:0; }
+
+/* ------------------ FORMS ------------------ */
+.form-control { border-radius:8px; border:1px solid #ddd; padding:10px 12px; }
+.form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0,87,255,0.12); outline: none; }
+
+/* form layout helper */
+.form-row { display:grid; grid-template-columns: repeat(2,1fr); gap:12px; }
+@media (max-width:767.98px) { .form-row{ grid-template-columns:1fr; } }
+
+/* ------------------ MODAL DETAILS ------------------ */
+/* Make modal detail layout clean & responsive */
+#productDetailModal .modal-body img { width:100%; height:auto; object-fit:cover; display:block; border-radius:8px; }
+#productDetailModal .modal-body .detail-grid { display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+@media (max-width:767.98px) { #productDetailModal .modal-body .detail-grid { grid-template-columns: 1fr; } }
+
+/* product detail small typography */
+#productDetailModal .modal-body .small { font-size: .95rem; color: var(--muted); }
+#productDetailModal .modal-body .detail-label { color: var(--muted); font-size: .9rem; }
+
+/* ------------------ IMAGE CRISP FIXES (explicit) ------------------ */
+/* Extra safety to ensure images don't appear blurry on high-dpi or GPU combos */
+img { max-width:100%; height:auto; display:block; }
+.product-card img, .product-card .card-img-top, #productDetailModal img, .upload-preview img {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  image-rendering: auto;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* Avoid accidental backdrop blurs on product image parents */
+.product-card, .product-card .card-body, .product-card .logo-badge { backdrop-filter: none; }
+
+/* ------------------ ANIMATIONS ------------------ */
+.fade-in { animation: fadeIn .45s ease backwards; }
+@keyframes fadeIn { from{opacity:0; transform: translateY(6px)} to{opacity:1; transform: translateY(0)} }
+
+/* ------------------ TOAST / ALERTS ------------------ */
+.alert { border-radius:10px; }
+
+/* ------------------ SMALL UTILITIES ------------------ */
+.text-muted { color: var(--muted); }
+.mb-2 { margin-bottom:.5rem; }
+.mt-2 { margin-top:.5rem; }
+
+/* show/hide utils for responsive */
+.show-sm { display:none; } .hide-sm { display:inherit; }
+@media (max-width:991.98px){ .show-sm{ display:inline-block !important } .hide-sm{ display:none !important } }
+
+/* accessibility focus helpers */
+.hamburger:focus, .btn:focus, .sidebar a:focus, .product-clickable:focus { outline: 3px solid rgba(0,87,255,0.12); outline-offset:2px; }
+
+/* ------------------ RESPONSIVE TWEAKS ------------------ */
+@media (max-width:575.98px) {
+  .product-card .card-img-top { height:220px; }
+  .product-card .logo-badge { width:48px; height:48px; right:8px; top:8px; }
+  .product-card .card-body { min-height:110px; padding:12px; }
+  .navbar-brand span { font-size:1rem; }
+  .main-content { padding:14px; }
+}
+
+/* ------------------ FINAL SMALL HELPERS ------------------ */
+.center { text-align:center; }
+.muted { color: rgba(0,0,0,0.6); font-size:.95rem; }
+
+/* Keep transitions smooth */
+.sidebar, .main-content, .product-card { transition: all .22s ease; }
+
+/* ------------------ OPTIONAL: helper class to avoid upscaling images
+   Use <img class="noupscale"> if you prefer center-crop instead of upscaling */
+.product-card img.noupscale {
+  max-width:100%;
+  height:auto;
+  object-fit: none;
+  object-position: center;
+}

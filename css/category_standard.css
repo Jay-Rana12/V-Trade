@@ -1,0 +1,489 @@
+/* category_standard.css - Ultra-Minimalist "Cool Square" Design */
+
+/* ════════ TOP FILTER BAR (NEW) ════════ */
+/* ════════ PREMIUM TOP FILTER BAR (UPGRADED) ════════ */
+.ts-filter-bar {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+    background: #ffffff !important;
+    padding: 15px 25px !important;
+    border-radius: 14px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05) !important;
+    margin-bottom: 40px !important;
+    border: 1px solid #e2e8f0 !important;
+    width: 100% !important;
+    max-width: 1300px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.ts-filter-search-wrap {
+    flex-grow: 1 !important;
+    position: relative !important;
+    max-width: 400px;
+}
+
+.ts-filter-search-wrap i {
+    position: absolute !important;
+    left: 18px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: #f26b43 !important;
+    font-size: 0.9rem;
+}
+
+.ts-filter-input {
+    width: 100% !important;
+    height: 48px !important;
+    padding: 12px 12px 12px 48px !important;
+    border: 1.5px solid #f1f5f9 !important;
+    background: #f8fafc !important;
+    border-radius: 10px !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    color: #0A2540 !important;
+    outline: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.ts-filter-input:focus {
+    border-color: #f26b43 !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(242, 107, 67, 0.1) !important;
+}
+
+.ts-filter-select {
+    height: 48px !important;
+    padding: 0 40px 0 20px !important;
+    border: 1.5px solid #f1f5f9 !important;
+    border-radius: 10px !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    color: #475569 !important;
+    background: #f8fafc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2364748b' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E") no-repeat right 15px center !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    cursor: pointer !important;
+    outline: none !important;
+    min-width: 180px !important;
+    transition: all 0.3s ease;
+}
+
+.ts-filter-select:hover {
+    border-color: #cbd5e1 !important;
+    background-color: #f1f5f9 !important;
+}
+
+.ts-btn-enquire {
+    background: #0A2540 !important;
+    color: white !important;
+    border: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.ts-btn-enquire:hover {
+    background: #1c2d3d !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(10, 37, 64, 0.2) !important;
+}
+
+/* ════════ FILTER DRAWER (MODAL) ════════ */
+.filter-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(10, 37, 64, 0.4) !important;
+    backdrop-filter: blur(8px) !important;
+    z-index: 10000 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.4s ease !important;
+}
+
+.filter-overlay.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.filter-drawer {
+    position: fixed !important;
+    top: 0 !important;
+    right: -450px !important; /* Start off-screen */
+    width: 400px !important;
+    height: 100% !important;
+    background: #ffffff !important;
+    z-index: 10001 !important;
+    box-shadow: -20px 0 50px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.filter-overlay.active .filter-drawer {
+    right: 0 !important;
+}
+
+.filter-drawer-header {
+    padding: 25px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.filter-drawer-header h2 {
+    font-size: 1.3rem !important;
+    font-weight: 800 !important;
+    color: #0A2540 !important;
+    margin: 0 !important;
+}
+
+.btn-close-filter {
+    background: #f8fafc !important;
+    border: none !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #64748b !important;
+    transition: all 0.2s !important;
+}
+
+.btn-close-filter:hover {
+    background: #ef4444 !important;
+    color: #ffffff !important;
+}
+
+.filter-drawer-content {
+    padding: 25px !important;
+    overflow-y: auto !important;
+    flex-grow: 1 !important;
+}
+
+.filter-drawer-footer {
+    padding: 20px 25px !important;
+    border-top: 1px solid #f1f5f9 !important;
+    background: #f8fafc !important;
+}
+
+/* Sidebar Boxes turned into Drawer Sections */
+.sidebar-box {
+    margin-bottom: 30px !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.sidebar-box-header {
+    font-size: 0.85rem !important;
+    font-weight: 800 !important;
+    color: #94a3b8 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.filter-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.filter-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 8px 0 !important;
+    color: #475569 !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.2s !important;
+}
+
+.filter-item:hover {
+    color: #f26b43 !important;
+}
+
+.filter-item input[type="checkbox"] {
+    width: 18px !important;
+    height: 18px !important;
+    accent-color: #f26b43 !important;
+    cursor: pointer !important;
+}
+
+/* ════════ SQUARE GRID & CARDS ════════ */
+.ts-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 28px !important;
+    width: 100% !important;
+    max-width: 1300px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    align-items: start !important;
+}
+
+@media (max-width: 1000px) {
+    .ts-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+@media (max-width: 640px) {
+    .ts-grid { grid-template-columns: 1fr !important; }
+}
+
+.ts-card {
+    background: #ffffff !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03) !important;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    border: 1px solid #f1f5f9 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    position: relative !important;
+    width: 100% !important;
+    align-items: stretch !important;
+    box-sizing: border-box !important;
+}
+
+.ts-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 30px 60px rgba(10, 37, 64, 0.1) !important;
+}
+
+/* Light Gray Image Wrap */
+.ts-img-wrap {
+    width: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 30px !important;
+    cursor: pointer !important;
+}
+
+.ts-img {
+    width: 85% !important;
+    height: 85% !important;
+    object-fit: contain !important;
+    transition: transform 0.6s ease !important;
+}
+
+.ts-card:hover .ts-img:hover {
+    transform: scale(1.1) !important;
+}
+
+.ts-brand-logo-card {
+    width: 36px !important;
+    height: 36px !important;
+    background: #ffffff !important;
+    border-radius: 10px !important;
+    padding: 4px !important;
+    box-shadow: 0 4px 12px rgba(10, 37, 64, 0.06) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1px solid rgba(0,0,0,0.05) !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    flex-shrink: 0 !important;
+}
+
+.ts-brand-logo-card img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    border-radius: 4px !important;
+}
+
+.ts-card:hover .ts-brand-logo-card {
+    transform: translateY(-5px) scale(1.1) rotate(5deg) !important;
+    box-shadow: 0 15px 35px rgba(10, 37, 64, 0.2) !important;
+}
+
+/* Content Body */
+.ts-body {
+    padding: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    align-items: stretch !important;
+}
+
+.ts-cat-row {
+    margin-bottom: 12px !important;
+}
+
+.ts-cat-tag {
+    background: #fff1ec !important; /* Light orange bg */
+    color: #f26b43 !important; /* Orange text */
+    padding: 6px 16px !important;
+    border-radius: 100px !important; /* Pill shape */
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    display: inline-block !important;
+    text-transform: uppercase !important;
+}
+
+/* Product Name */
+.ts-name {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.5rem !important;
+    font-weight: 900 !important; /* Maximum boldness for premium feel */
+    color: #0A2540 !important;
+    margin-bottom: 12px !important;
+    line-height: 1.1 !important;
+    width: 100% !important;
+}
+
+.ts-desc {
+    display: block !important;
+    font-size: 1rem !important;
+    color: #64748b !important;
+    line-height: 1.5 !important;
+    margin-bottom: 25px !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    width: 100% !important;
+}
+
+/* Price Section */
+.ts-price-row {
+    margin-bottom: 25px !important;
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 8px !important;
+    flex-wrap: wrap !important;
+}
+
+.ts-price {
+    font-size: 1.5rem !important;
+    font-weight: 900 !important;
+    color: #0A2540 !important;
+}
+
+.ts-unit {
+    font-size: 1.1rem !important;
+    color: #94a3b8 !important;
+    font-weight: 600 !important;
+}
+
+/* Footer Buttons */
+.ts-footer {
+    margin-top: auto !important;
+}
+
+.ts-actions {
+    display: grid !important;
+    grid-template-columns: 1fr 1.2fr !important;
+    gap: 12px !important;
+    width: 100% !important;
+}
+
+.ts-btn-detail, .ts-btn-enquire {
+    height: 48px !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.3s !important;
+}
+
+.ts-btn-detail { 
+    background: #0A2540 !important; 
+    color: #ffffff !important; 
+}
+
+.ts-btn-enquire { 
+    background: #ffffff !important; 
+    color: #f26b43 !important; 
+    border: 2px solid #f26b43 !important;
+}
+
+.ts-btn-detail:hover { 
+    background: #1e293b !important;
+    transform: translateY(-2px) !important;
+}
+
+.ts-btn-enquire:hover { 
+    background: #fff1ec !important;
+    transform: translateY(-2px) !important;
+}
+
+/* ════════ PREMIUM PAGINATION ════════ */
+.pagination-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 50px auto !important;
+    gap: 10px !important;
+    width: fit-content !important;
+    background: #ffffff !important;
+    padding: 15px 30px !important;
+    border-radius: 100px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid #f1f5f9 !important;
+}
+
+.pagination-btn {
+    min-width: 44px !important;
+    height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    color: #475569 !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    border-radius: 12px !important;
+    cursor: pointer !important;
+    transition: all 0.3s !important;
+}
+
+.pagination-btn.active {
+    background: #2563eb !important;
+    color: #ffffff !important;
+    border-color: #2563eb !important;
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2) !important;
+}
+
+.pagination-info {
+    margin-left: 20px !important;
+    font-size: 0.9rem !important;
+    color: #64748b !important;
+    font-weight: 600 !important;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .ts-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 680px) {
+    .ts-grid { grid-template-columns: 1fr !important; }
+    .ts-filter-bar { flex-direction: column !important; align-items: stretch !important; }
+    .filter-drawer { width: 100% !important; right: -100% !important; }
+}

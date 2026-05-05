@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Enquiry - INDIATRADE</title>
+</head>
+<body style="margin:0;padding:0;background:#f1f5f9;font-family:'Segoe UI',Arial,sans-serif;">
+
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f1f5f9;padding:40px 0;">
+    <tr>
+      <td align="center">
+        <table width="620" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.10);">
+
+          <!-- Header -->
+          <tr>
+            <td style="background:linear-gradient(135deg,#0A2540 0%,#1a4b7f 100%);padding:36px 40px 28px;text-align:center;">
+              <div style="font-size:28px;font-weight:800;color:#ffffff;letter-spacing:2px;">INDIA<span style="color:#F26B43;">TRADE</span></div>
+              <div style="font-size:13px;color:rgba(255,255,255,0.65);margin-top:4px;letter-spacing:1px;">B2B WHOLESALE PLATFORM</div>
+              <div style="margin-top:20px;display:inline-block;background:rgba(242,107,67,0.18);border:1.5px solid #F26B43;border-radius:30px;padding:7px 22px;">
+                <span style="color:#F26B43;font-weight:700;font-size:13px;letter-spacing:0.5px;">
+                  &#9993;&nbsp;&nbsp;PRODUCT ENQUIRY RECEIVED
+                </span>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Greeting -->
+          <tr>
+            <td style="padding:32px 40px 8px;">
+              <p style="margin:0;font-size:20px;font-weight:700;color:#0A2540;">Hello, {{to_name}}! 👋</p>
+              <p style="margin:10px 0 0;font-size:14px;color:#64748b;line-height:1.6;">
+                Your <strong style="color:#F26B43;">{{enquiry_type}}</strong> has been successfully submitted. Here are the complete details of the product you enquired about.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Product Card -->
+          <tr>
+            <td style="padding:20px 40px;">
+              <table width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#f8fafc,#eff6ff);border:1.5px solid #e0f2fe;border-radius:14px;overflow:hidden;">
+                <tr>
+                  <td style="background:#0A2540;padding:12px 20px;">
+                    <span style="color:#F26B43;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;">&#128230; Product Details</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:20px 24px;">
+                    <div style="font-size:22px;font-weight:800;color:#0A2540;margin-bottom:6px;">{{product_name}}</div>
+                    <div style="display:inline-block;background:#fff7ed;border:1.5px solid #fed7aa;border-radius:8px;padding:6px 16px;margin-bottom:16px;">
+                      <span style="font-size:13px;font-weight:700;color:#c2410c;">&#8377; Export Price: {{product_price}}</span>
+                    </div>
+
+                    <!-- Specs -->
+                    <div style="font-size:11px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Specifications</div>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="padding:0;vertical-align:top;width:50%;">
+                          <div style="background:#ffffff;border-radius:8px;padding:12px 14px;border:1px solid #e2e8f0;font-size:13px;color:#374151;line-height:2;white-space:pre-line;">{{product_specs}}</div>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- Certifications -->
+                    <div style="font-size:11px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;margin:16px 0 8px;">Certifications &amp; Standards</div>
+                    <div style="background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:8px;padding:10px 14px;font-size:13px;color:#15803d;font-weight:600;">
+                      &#10003;&nbsp; {{product_certs}}
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Enquiry Type Badge -->
+          <tr>
+            <td style="padding:0 40px 20px;">
+              <table width="100%" cellpadding="0" cellspacing="0" style="background:#fef3f2;border:1.5px solid #fecaca;border-radius:10px;padding:0;">
+                <tr>
+                  <td style="padding:14px 20px;">
+                    <span style="font-size:13px;color:#dc2626;font-weight:700;">&#128222;&nbsp; Enquiry Type: {{enquiry_type}}</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span style="font-size:13px;color:#64748b;">&#128197;&nbsp; Submitted: {{sent_date}}</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Your Contact Info -->
+          <tr>
+            <td style="padding:0 40px 20px;">
+              <div style="font-size:11px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Your Contact Information</div>
+              <table width="100%" cellpadding="0" cellspacing="0" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;">
+                <tr>
+                  <td style="padding:14px 20px;border-bottom:1px solid #e2e8f0;">
+                    <span style="font-size:13px;color:#64748b;">&#128231; Email:&nbsp;</span>
+                    <span style="font-size:13px;color:#0A2540;font-weight:600;">{{user_email}}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:14px 20px;">
+                    <span style="font-size:13px;color:#64748b;">&#128241; Phone:&nbsp;</span>
+                    <span style="font-size:13px;color:#0A2540;font-weight:600;">{{user_phone}}</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- CTA Button -->
+          <tr>
+            <td style="padding:0 40px 32px;text-align:center;">
+              <p style="font-size:13px;color:#64748b;margin-bottom:16px;">Our team will get back to you within <strong>24–48 business hours</strong>.</p>
+              <a href="https://indiatrade.in/contact.html" style="display:inline-block;background:linear-gradient(135deg,#F26B43,#e04e1e);color:#ffffff;font-weight:700;font-size:14px;padding:14px 36px;border-radius:10px;text-decoration:none;letter-spacing:0.5px;">
+                &#128172;&nbsp; Talk to Our Trade Team
+              </a>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background:#0A2540;padding:24px 40px;text-align:center;">
+              <div style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.8;">
+                &copy; 2026 <strong style="color:#F26B43;">INDIATRADE</strong> &mdash; B2B Stainless Steel Wholesale Platform<br>
+                123 Business Avenue, BKC, Mumbai, India &nbsp;|&nbsp; +91 99244 88938<br>
+                <span style="font-size:11px;">This email was sent because you submitted a product enquiry on indiatrade.in</span>
+              </div>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
