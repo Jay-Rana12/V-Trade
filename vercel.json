@@ -1,6 +1,12 @@
 {
-  "buildCommand": "echo 'Static HTML build'",
-  "outputDirectory": ".",
-  "cleanUrls": true,
-  "trailingSlash": false
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
 }

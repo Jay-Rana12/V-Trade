@@ -1,5 +1,6 @@
 {
-  "scripts": {
+  "name": "v-trade",
+  "main": "index.html",
     "start-admin": "node admin_server.js",
     "sync": "node sync_to_db.js"
   },
